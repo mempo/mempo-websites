@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html xml:lang="en">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css?type=text/css" type="text/css" />
+<link href="favicon.png?type=image/png" type="image/png" />
+
+<title>Mempo Project: Security+Privacy</title>
+
+</head>
+
+
+<body>
+
+<h1>WORK IN PROGRESS VERSION OF PAGE - contains errors, typos, etc...</h1>
+
+<!-- 
+<div id="language"><a href="index_en.html">English</a> </div>
+-->
+
+
+<div id="logo">
+	<a href="index_en.html" title="Homepage">
+		<img src="images/banner2-1.png" alt="Mempo Project: Security+Privacy" style="border: none; " />
+	</a>
+</div>
+
+<div id="breadcrumbs">
+
+<div class="tab_breadcrumb">
+	<div>Home</div>
+</div>
+
+<div>
+	<div>Progress
+[<b><abbr title="Stage #1 goals: provide Debian system that by default uses GrSecurity kernel, Tor,I2p,Freenet,VPN, 1 test VM in Xnest, all firewalled, all verificable-builded.">stage #1</abbr></b>]:
+~15%
+</div>
+</div>
+
+<div>
+<img src="images/progress1.png" height="31">
+</div>
+
+<div>
+<div>
+<abbr title="Current Work in Progress.
+Roadmap will be described in detail later on this page.
+">WIP</abbr>: planning, prototypes.
+</div>
+</div>
+
+</div><!-- breadcrums -->
+
+<div id="navbar">
+	<center><b>Main Series</b></center>
+	<ul>
+		<li class="nav1"><a href="/" title="Start">
+			Start</a>
+		</li>
+	</ul>
+	<hr />
+
+	<center><b>Additional Information</b></center>
+	<ul>
+                <li class="nav1"><a href="index.html" title="Start">
+                        Start</a>
+                </li>
+	</ul>
+	<hr />
+
+	<div><p>(Page is under construction)</p></div>
+	<br/>
+</div><!-- navbar -->
+
+
+
+<div id="content">
+<h1>Mempo Project - Hardened Privacy</h1>
+
+<div>
+
+<div class="mission-cont">
+<div class="mission">
+<b>⌘</b>
+Mempo project aims to provide most secure and yet comfortable <b>out-of-the-box</b> computer for Desktop and Server, <br/>
+to <b>professionals</b>, <b>business</b>, <b>journalists</b>, and <b>every-day users</b> avoiding PRISM-like spying.
+<b>⌘</b>
+</p>
+</div></div>
+
+<p>
+<abbr title="Mempo (menpō) - n. type of facial armour worn by the samurai, in form of a mask.">Mempo</abbr> 
+Project is the <b>answer to</b> increasing <b>surveillance</b> of people, and endangered <b>freedom of speech</b>
+- as well to other <b>IT attacks</b>, cracking by <abbr title="Of course Hackers mean something else actually, therefore the 'cracking' word before.">hackers</abbr>, viruses.
+</p>
+</div>
+
+<p class="thewarning1">Even 
+<abbr title="Tor, I2P, Freenet, VPN, SE Linux, GPG, AES, LUKS - all this are awesome, but if they work alone then they can be bypassed on another level, e.g. rootkit, faulty driver like nvidia root-gaining bug in example; Even vanilla pure FOSS linux kernel had gain-root exploits.">professional tools</abbr> are not secure 
+if there exist way around them for an attacker.</p>
+
+<br/>
+
+<p><b>Therefore</b> - in Mempo, the best <b>Privacy & Security</b> tools are used together on <b>all levels from Kernel to Apps</b>; preconfigured for <b>VM+Tor+VPN</b>, 
+for <b>virtualization and compartment</b>
+- all available in <b>one-click fashion</b> as Full Installable OS, Live-CD, or separate programs (<b>sources</b> and <b>.deb</b> files + deb-repo).
+</p> 
+
+<div id="hover1">Do I need Mempo? <span>[read more...]</span>
+<div>
+Basically no one is really using the potential of existing security and privacy apps because of time and effort, 
+and professinal solutions are fixing given issue - but leaving other small holes.
+<br/>
+<br/>
+Most people do not even know about hardware level attacks, root-kits, cold-boot, hacking NIC PCI cards, bugs in e.g. Xen, fire-wire attack, etc.
+<br/>
+<br/><p>But is your computer immune (to the extent of currently available software) to known attacks?</p>
+<br/>
+Well. If you do use... <i>theoretically unexploitable micro-kernel system like <b>GNU Hurd</b> on <b>OpenRISC</b>
+or at least GrSecurity max-settings kernel; on custom open-hardware mobo/BIOS/firmware, 
+using PGP/post-QC where needed, with per-app files access-lists, everything is on separate VM on separate user
+with firewalled tunnels in between, all compiled from source after you meet all the developers on PGP signing-party
+ - then yeah <b>OK, in this case this Project can not offer you much </b> <abbr title="And welcome to our humble website, Stallman :-)">:-)</abbr>
+<br/>In any other case - continue below for details.</i>
+</div>
+</div>
+
+<br/>
+
+<div class="attributes">
+<b>FAQ</b>-1: To clear any initial miss-conceptions or questions: Mempo <b>is</b>:
+<ul>
+<li><em>Light</em> and <abbr title="E.g. Qubes-OS relies on VMs, while we also will have strong enough user/chroot based separation. For User to choose, per each use.">fast</abbr></li>
+<li><em>Easy</em> for non-technicals</li>
+<li>Learning from <em>Tails, Qubes-OS, Hardened-Gentoo</em></li>
+<li>...but providing <abbr title="Scope of Mempo is larger then Tails and then Qubes-OS. We aim to learn from their experience, and where possible work arm in arm in developing shared FOSS code.">more</abbr></li>
+<li>Prefering <abbr title="GrSecurity (with RBAC - role based access controll, like SE-Linux but more fine grained) and PAX kernel protection (that SE Linux usually lacks)"
+>GrSec+PAX</abbr> over <abbr title="SE Linux is traditionally 'the secure Linux' used in e.g. FBI, because of rights separation by labeling files, we want to do even more.">SE Linux</li>
+<li>Usable like regular Debian</li>
+<li>Developed inside <abbr title="We plan to use Debian.org infrastructure; Though initiall work is in private SVNs, files, and onGitHub so far">Debian.org</abbr></li>
+<li>Usable on <abbr title="Many things are tuned for Debian, but components of our software, scripts, HOW-TOs, programs, could be usable right away on any Linux or even other Unixes as applicable">all Linux</abbr></li>
+<li>Usable on home-made PC</li>
+<li>As Primary OS</li>
+<li>As packets</li>
+<li>As <abbr title="Planned for later, e.g. 2014?">Live-CD</abbr></li>
+<li>Flash/Wine/etc compatible (VM)</li>
+<li>At stage of prototyping</li>
+<li>To deliver <abbr title="Fully open-hardware high-speed advanced CPUs are still thing of the future (but maybe not that far away, with crowdfunding like 3d printers).
+But we can choose most open and secure hardware, avoid locked down bogus versions of mobo/UEFI, pick one that works with Core Boot, use cards that work without closed firmware blobs. We can add own SPECIAL hardware like HW-RNG or pin-entry. We can try to create free market demand for openhw components e.g. simple GFX framebuffer card, or NIC etc/wifi cards."
+>custom hardware</li>
+<li>Always BSD/GPL/<abbr title="We believe in freedom for the software that was published - so all software of Mempo distribution. Zero-CC or Public Domain might be fine by use. Code that is already GPL (less free in a way) will by default be also GPL'ed (and under most law systems where GPL is effective, this must remain as GPL). 
+We might provide also access to software that has other licences, e.g. if someone needs to use Adobe Flash (in isolation/VM).">0-CC</abbr> licensed</li>
+<li>Giving back to FOSS</li>
+<li><abbr title="Had similar idea? Maybe you are already expert or advanced in one of tools we use? Excellent - then please contact us, so we can work together :)"><em>Cooperative!</em></abbr></li>
+<li>To be crowdfunded</li>
+<li><abbr title="We personally can hope Software will be used for greater good like freedom of speech, and many of us think that free-market and volountary crowdfunding will help to organize long-lasting Project. But, the created software is apolitcal and serves everyone, as FOSS alway does.">Apolitical</abbr></li>
+</ul>
+<div class="clear"></div>
+</div>
+
+<!-- TOPIC -->
+	<div class="container">
+		<div class="boxhead">
+			<h2>Mempo description</h2>
+		</div>
+
+		<div class="innerbox">
+		<!--   hack necessary because putting padding and width: 100% on the same element confuses firefox & konqueror (at least)   -->
+		<div class="innerinnerbox">
+			<h3>All layers of security - <i>the weakest link is the problem</i></i></h3>
+
+<p><i>How good is your super-secure encryption or network, if Kernel rootkit can go straight pass it?</i></p>
+
+<div><!--layers diagram-->
+
+<table>
+<tr>
+
+<td valign="top">
+<img src="mempo-system-layers.png"
+width="500" height="512"
+alt="Mempo System Layers"
+/>
+</td>
+
+<td valign="top">
+
+<div class="layers1">
+Entire System - from Hardware, Kernel, throught System, VM creation, up to Applications is secured.
+
+<div>
+<br/>Each of <b>the layers</b> is created by researching and selecting best available software in given category. 
+Programs are configured to <b>use and reinforce each-other</b> to fit nicelly (e.g. email uses Tor, Tor can use VPN, grsecurity contains any exploits,
+ apt-get uses all of above to be sure). <b>User applications</b> are also <b>preconfigured and ready to use in most secure way</b>.
+</div>
+</div> <!-- layers1 -->
+
+<b class="cool">Show technical details</b>:
+⇨<input type="checkbox" value="details" id="button-layers" 
+/>⇦
+click checkbox to open
+<div class="layers2">
+<ul class="layers">
+
+<li><em>Hardware</em> - Selected parts.
+<b>Coreboot</b> BIOS. 
+Protected <b><abbr title="Read-Only protection against e.g. replacing the MBR/Boot data (which is not encrypted and easy to manipulate with direct access). It could be small boot-device with physical switch like jumper to enable write if needed (e.g. system update). Could use chainloader where the 1st boot is never updated, and verifies security of 2nd one (checksum) and then executes it.">RO</abbr> boot</b>+mbr.
+Own OpenHW: <abbr title="Hardware Random Generator">HWRNG</abbr>, pin/<b>pgp-keyboard</b>, anti-breakin case. <b>RFID</b> (auto-lock, auto-erase on theft).
+<br/>Open CPU (<b>OpenRISC</b>?) for selected tasks in future (keygen, most secret messages, bitcoin wallet).
+</li>
+
+<li><em>Kernel</em> - Currently Linux kernel. Hardened with <b>Grsecurity</b>+PAX (instead just SE Linux). <b>Slim</b>, just few drivers (secure/FOSS). 
+Custom <b>paranoid patches</b> (memory scrub, <b>AES key</b> in CPU registers etc).
+</li>
+
+<li>
+<em>System</em> - LUKS and other <b>full-root</b> encryption. <b>Hidden</b> filesystem. One-time, PIN, USB-key passwords. <b>New SysRq</b> instant lockdown.
+<b>RBAC</b> file-access profiles and <b>PAX flags</b>.
+<br/>Graphics - X with light 
+<abbr title="WM - Windows Manager, DE - Desktop Environemnt. It will be very light, current candidate is XFCE or Black Box. Inside isolations, 
+in VMs or Xnest/VNC separate user all other DE are possible of course."
+>WM/DE</abbr> (<b>XFCE</b>?)
+patched to block driver exploits
+(<abbr title="IO Ports are used tradditionaly by all Graphical card drivers / Xorg. This opens huge security risk (invalid ioport use = unrestricted kernel memory overwrite!) Grsecurity can block this, but it stops Xorg from working. We provide patched Xorg that works (of course on supported Hardware, likelly Intel or supported Radeons - until one day open-hardware GFX cards are feasible reality :).">ioport</abbr>).
+</li>
+
+<li>
+<em>Mempo manager</em> - <b>create VMs</b>, <b>isolated users</b>. Manage <b>all protections in one place</b> (optional GUI).
+
+<br/>Backup and <b>sign allerts</b>. Log all events (encrypted). 
+Show information in not-distracting way (GUI).
+
+<br/><b>Multi-sign</b> apt-get; <b>verificable</b> binary builds. <b>White-list</b> database antivirus.
+
+<br/>Signing binaries. Adding custom binary (<abbr title="Trusted Path Execution feauture of Grsecurity - normally we allow only binaries from e.g. /bin/ /usr/bin, but for certain users we can make exceptions, e.g. for developers whom compile own programs">TPE</abbr>, for developers). Run program in <b>One-time VM</b> or user.
+
+</li>	
+
+
+<li>
+<em>VM, Isolation</em> - all programs can be completly isolated, 
+<b>both as VM and user chroot</b>. 
+<br/>Full compartment of every 
+<b><abbr
+title="In more paranoid setup user John has unix-user for i2p-server, freenet-server, yacy-server, fms-server, and X user to run firefox, thunderbird 
+and use this services; And so does user Bob, and Marry. Creating all this
+5×3 users setup will be one-click with Mempo Manager panel."
+>program×user</abbr></b>
+is now feasible, or 
+<b><abbr title="You can run bitcoin-wallet VM, and there again isolated accounts:
+for the hot-wallet, cold-wallet, LAMP allowing them to communicate only over whitelisted channels (e.g. LAMP:* can talk to localhost/hot-wallet:bitcoin-api, LAMP and logging daemon can both access /var/log/apache/shop/ with append/read-only rights)"
+>isolating²
+</abbr></b>
+ - again inside VM.
+
+<br/><b>Heavy isolation</b> - by running in VM (<b>Xen, KVM</b>), similar to Qubes-OS.
+<br/><b>Light and strong</b> - by running as separate <b>unix user</b>
+<abbr="Chroot jails are actually strong and unescapable, on Grsecurity kernels that block known 10 methods of escaping. Firewall with local user-ID rules can isolate network fully."><b>chroot</b>/isolated</abbr>, 
+with <b>Xnest/VNC</b>,
+iptables/<abbr title="GrSecurity Role-Based Access Controll, depending of role/usage of given application same program can be denied access, even when running as root"
+>grsecurity-RBAC</abbr>.
+
+
+<br/>Copy/paste across VMs/users, also share file/text (local encrypted tunnels/SFTP/xmpp).
+
+</li>
+
+<li>
+<em>Networking</em> - <b>Tor, Freenet, I2P, VPN</b> or normal. With stacking (Freenet+VPN; I2P+VPN). 
+<br/>Selectable <b>per each VM</b> and user. Toggable server-mode, <b>cover</b> traffic. <b>Auto profiles</b> (work/home/travel/gsm).
+</li>
+
+<li>
+<em>Encryption</em> - <b>PGP</b>, good default settings (keyserver over Tor).
+Preinstalled keys of Mempo.
+<abbr title="Quantum-Computing resistant algorithms exist today - they can not be broken trivially when big QC-computers are created in future.
+First Quantym computers exist now and allow to break e.g. RSA once they are improved.
+WASTE p2p software did used one kind of such crypto since ~2006, though their QC was later considered less secure then assumed.">
+<b>QC</b> resistant crypto.
+</abbr>
+<b>Multi-crypt</b> (stack e.g. 
+<abbr title="The QC resistant algorithms are not yet fully analyzed and could turn out to be imperfect like allagedly WASTE's did. 
+Solution is to use combined e.g. 2 post-QC and 1 classical algorithm, so that flaw in the QC-resistant but unverified new algorithms 
+still would not be a problem. 
+In placeses that need extra security (despite speed and space cost) - e.g. most secure backups, root certificates, etc."
+>AES+QC1+QC2</abbr>).
+Secure random generator (HWRNG, entropy to VMs, bigger pools).
+</li>
+
+<li>
+<em>Applications</em> all preconfigured to use above tools.
+
+<ul>
+<li><u>Chat and VoIP:</u> <b>Pidgin</b>, Jitsi, Mumble, Linphone - using 
+Tor/VPN/I2P <b>OTR</b>/PGP</li>
+
+<li><u>E-Money:</u> <b>Bitcoin</b>, Namecoin, 
+<abbr title="Alternative coins, might include: Litecoin, Feather-coin,
+Nova/PP/Tera -coin; Others possible.">Alt-coins</a></abbr>.
+
+Tor/VPN/I2P, backup (to RAID, to remote). Log of all operations.
+Isolated wallet: in VM (encrypted), fast-bootstrap.
+</li>
+
+<li>
+<u>Email:</u> Thunderbird, <b>Kmail</b> - using Tor/I2P/VPN <b>PGP</b>, also <b>Freemail</b>
+</li>
+
+<li>
+<u>Web:</u> Firefox with privacy plugin (https everywhere, Adblock, privoxy, more). 
+No-Javascript/plugins in selected profiles.
+<br/>Easy usage of services: OpenStreetMap, <b>DuckDuckGo</b>, StartPage, 
+<b>YACY</b>
+</li>
+
+</ul>
+
+
+
+</li> <!-- applications -->
+
+</ul> <!-- layers -->
+</div> <!-- layers2 -->
+
+</td>
+
+</tr>
+</table> 
+
+</div><!--layers diagram-->
+
+
+
+		</div>
+		</div>
+
+
+
+	</div> <!-- container -->
+<!-- /TOPIC -->
+
+
+
+
+
+
+<!-- TOPIC -->
+	<div class="container">
+		<div class="boxhead">
+			<h2>Mempo cooperation</h2>
+		</div>
+
+
+		<div class="innerbox">
+		<!W--   hack necessary because putting padding and width: 100% on the same element confuses firefox & konqueror (at least)   -->
+		<div class="innerinnerbox">
+<!-- topic text -->
+
+<h3>Created in cooperation</h3>
+
+Everyone interested is invited to join creation of the system.<br/>
+We accept and even encourage developers that protect their privacy/security (although for some positions like code reviews a well known or real-life known people are needed too).<br/>
+
+<b class="cool">Show credits (in progress - sign up)</b>:
+⇨<input type="checkbox" value="details" id="button-details2" 
+/>⇦
+click checkbox to open
+<div class="details2">
+
+<div class="legend">
+<sup>[Priv]</sup> - this person (or group) prefers to develop under pseudonym (but we know it's not untracable, at all).<br/>
+<sup>[Anon]</sup> - this person (or group) develops anonymously (e.g. behind Tor).<br/>
+<sup>[DEEP]</sup> - this person (or group) develops secrutly (e.g. only Freenet) and we hope he is quite hard to find - and therefore quite resistant for any corporation or state pressure, attacks or blackmail.<br/>
+<u>(?)</u> - only planned - cooperation is not yet confirmed.
+</div>
+
+<ul class="people-list">
+
+<li>Lead
+	<ul>
+	<li><b>mempo</b><sup>[Priv]</sup> - mempo @irc.freenode.org @irc.oftc.net @irc2p</li>
+	<li>(Position opened - this could be you)</li>
+	</ul>
+</li>
+
+<li>Marketing
+<ul>
+<li>
+None (<abbr title="We all want to use our own product.">Eat own dog food</abbr> 
++
+<abbr title="This product must good enough so that our team, as well as best-testers and users, would volountarly want to recommend it to friends whos privacy they care about."
+>you are the PR)</li>
+</ul>
+</li>
+
+<li>Coordination and planning
+	<ul>
+	<li>(Position opened - this could be you)</li>
+	</ul>
+</li>
+
+
+<li>Programming - creating custom software where needed
+	<ul>
+	<li><b>mempo</b><sup>[Priv]</sup> - mempo @irc.freenode.org @irc.oftc.net @irc2p</li>
+	<li>(Position opened - this could be you)</li>
+	</ul>
+</li>
+
+<li>Electronics - creating custom hardware where needed
+	<ul>
+	<li>(Position opened - this could be you)</li>
+	</ul>
+</li>
+
+
+<li>Alpha Testing
+	<ul>
+	<li><b>happuri<u>(?)</u></b><sup>[Priv]</sup> - happuri @irc.freenode.org @irc.oftc.net @irc2p</li>
+	<li>(Position opened - this could be you)</li>
+	</ul>
+</li>
+
+<li>Security team
+	<ul>
+	<li><b>mempo</b></li>
+	<li>(Position opened - this could be you)</li>
+	</ul>
+</li>
+
+
+<li>Security advisors
+	<ul>
+	<li><b>kees<u>(?)</u></b> - Debian, Kernel - kees @irc.freenode.org</li>
+	<li><b>Eleriseth<u>(?)</u></b><sup>[DEEP]</sup> - Freenet</li>
+	<li><b>Paul Proteus<u>(?)</u></b> - Debian, <b>verificable-builds</b> - paulproteus @irc.freenode.org</li>
+	<li>(Position opened - this could be you)</li>
+	</ul>
+</li>
+
+
+<li>Software advisors - please contact us on IRC if you can help with given part
+	<ul>
+	<li>For Tor - <b><u>(?)</u></b></li>
+	<li>For I2P - <b><u>(?)</u></b></li>
+	<li>For Freenet - <b><u>(?)</u></b></li>
+	<li>For VPNs - <b><u>(?)</u></b></li>
+	<li>For Cryptography - <b><u>(?)</u></b></li>
+	<li>For Xorg - <b><u>(?)</u></b></li>
+	<li>For Xen, KVM - <b><u>(?)</u></b></li>
+	<li>For other GNU applications - <b><u>(?)</u></b></li>
+	<li>For other &quot;Prism-Break&quot; applications - <b><u>(?)</u></b></li>
+	<li>For Pidgin or Jitsi - <b><u>(?)</u></b></li>
+	<li>For Mumble or Linphone or Ekiga - <b><u>(?)</u></b></li>
+	<li>For Bitcoin - <b><u>(?)</u></b></li>
+	<li>For Namecoin - <b><u>(?)</u></b></li>
+	<li>For Litecoin - <b><u>(?)</u></b></li>
+	<li>For alt-coins - <b><u>(?)</u></b></li>
+	</ul>
+</li>
+
+<li>Servers, Hosting and test Boxes
+	<ul>
+		<li>Debian Project infrastructure is planned to be used since we develop in-Debian mainly</li>
+		<li>(negotiations)</li>
+		<li>(we look for friends to mirror our repos, and run test servers)</li>
+		<li>Thanks to GitHub.com - we already use their public services</li>
+	</ul>
+</li>
+
+<li>Crowdfunding for Project and sub-projects
+	<ul>
+		<li>General <u>(?)</u></li>
+		<li>Customers and users relations<u>(?)</u></li>
+		<li>Customers and users support<u>(?)</u></li>
+	</ul>
+</li>
+
+
+<li>Translations: <u>(?)</u>
+</li>
+
+<li>Graphics: (on our own)</li>
+
+<li>Website: (on our own)</li>
+
+
+
+</ul>
+
+
+
+	</li>
+</ul>
+</div><!-- details -->
+
+<!-- /topic text -->
+		</div>
+		</div>
+
+
+
+	</div> <!-- container -->
+<!-- /TOPIC -->
+
+
+
+
+
+</div><!-- content -->
+
+<br clear="both" />
+
+<div id="footer">
+	<a>(No BitCoin yet :)<img src="images/bitcoin.png" /></a>
+</div><!--footer-->
+
+</body>
+</html>
