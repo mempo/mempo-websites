@@ -104,7 +104,7 @@ if there exist way around them for an attacker.</p>
 
 <br/>
 
-<p><b>Therefore</b> - in Mempo, the best <b>Privacy & Security</b> tools are used together on <b>all levels from Kernel to Apps</b>; preconfigured for <b>VM+Tor+VPN</b>, 
+<p><b>Therefore</b> - in Mempo, the best <b>Privacy & Security</b> tools are used together on <b>all levels from kernel to Apps</b>; preconfigured for <b>VM+Tor+VPN</b>, 
 for <b>virtualization and compartment</b>
 - all available in <b>one-click fashion</b> as Full Installable OS, Live-CD, or separate programs (<b>sources</b> and <b>.deb</b> files + deb-repo).
 </p> 
@@ -158,6 +158,7 @@ We might provide also access to software that has other licences, e.g. if someon
 <li><abbr title="Had similar idea? Maybe you are already expert or advanced in one of tools we use? Excellent - then please contact us, so we can work together :)"><em>Cooperative!</em></abbr></li>
 <li>To be crowdfunded</li>
 <li><abbr title="We personally can hope Software will be used for greater good like freedom of speech, and many of us think that free-market and volountary crowdfunding will help to organize long-lasting Project. But, the created software is apolitcal and serves everyone, as FOSS alway does.">Apolitical</abbr></li>
+<li><abbr title="Fortify the weakest link in chain, human, through teaching about security/privacy, warning against recenly founded threats and guiding how to securely use provided applications.">User education</abbr> focused</li>
 </ul>
 <div class="clear"></div>
 </div>
@@ -173,7 +174,7 @@ We might provide also access to software that has other licences, e.g. if someon
 		<div class="innerinnerbox">
 			<h3>All layers of security - <i>the weakest link is the problem</i></i></h3>
 
-<p><i>How good is your super-secure encryption or network, if Kernel rootkit can go around it?</i></p>
+<p><i>How good is your super-secure encryption or network, if kernel rootkit can go around it?</i></p>
 
 <div><!--layers diagram-->
 
@@ -190,7 +191,7 @@ alt="Mempo System Layers"
 <td valign="top">
 
 <div class="layers1">
-Entire System - from Hardware, Kernel, throught System, VM creation, up to Applications is secured.
+Entire System - from hardware, kernel, throught system, VM creation, up to applications is secured.
 
 <div>
 <br/>Each of <b>the layers</b> is created by researching and selecting best available software in given category. 
@@ -213,7 +214,7 @@ Own OpenHW: <abbr title="Hardware Random Generator">HWRNG</abbr>, pin/<b>pgp-key
 <br/>Open CPU (<b>OpenRISC</b>?) for selected tasks in future (keygen, most secret messages, bitcoin wallet).
 </li>
 
-<li><em>Kernel</em> - Currently Linux kernel. Hardened with <b>Grsecurity</b>+PAX (instead just SE Linux). <b>Slim</b>, just few drivers (secure/FOSS). 
+<li><em>kernel</em> - Currently Linux kernel. Hardened with <b>Grsecurity</b>+PAX (instead just SE Linux). <b>Slim</b>, just few drivers (secure/FOSS). 
 Custom <b>paranoid patches</b> (memory scrub, <b>AES key</b> in CPU registers etc).
 </li>
 
@@ -296,7 +297,7 @@ Secure random generator (HWRNG, entropy to VMs, bigger pools).
 
 <ul>
 <li><u>Chat and VoIP:</u> <b>Pidgin</b>, Jitsi, Mumble, Linphone - using 
-Tor/VPN/I2P <b>OTR</b>/PGP</li>
+Tor/VPN/I2P <b>OTR</b>/PGP</li>.
 
 <li><u>E-Money:</u> <b>Bitcoin</b>, Namecoin, 
 <abbr title="Alternative coins, might include: Litecoin, Feather-coin,
@@ -307,14 +308,13 @@ Isolated wallet: in VM (encrypted), fast-bootstrap.
 </li>
 
 <li>
-<u>Email:</u> Thunderbird, <b>Kmail</b> - using Tor/I2P/VPN <b>PGP</b>, also <b>Freemail</b>
+<u>Email:</u> Thunderbird, <b>Kmail</b> - using Tor/I2P/VPN <b>PGP</b>, also <b>Freemail</b>.
 </li>
 
 <li>
 <u>Web:</u> Firefox with privacy plugins (https everywhere, Adblock, privoxy, more). 
-No-Javascript/plugins in selected profiles.
-<br/>Easy usage of services: OpenStreetMap, <b>DuckDuckGo</b>, StartPage, 
-<b>YACY</b>
+No-Javascript/plugins in selected profiles. Easy usage of services: OpenStreetMap, <b>DuckDuckGo</b>, StartPage, 
+<b>YACY</b>.
 </li>
 
 </ul>
@@ -435,7 +435,7 @@ None (<abbr title="We all want to use our own product.">Eat own dog food</abbr>
 
 <li>Security advisors
 	<ul>
-	<li><b>kees<u>(?)</u></b> - Debian, Kernel - kees @irc.freenode.org</li>
+	<li><b>kees<u>(?)</u></b> - Debian, kernel - kees @irc.freenode.org</li>
 	<li><b>Eleriseth<u>(?)</u></b><sup>[DEEP]</sup> - Freenet</li>
 	<li><b>Paul Proteus<u>(?)</u></b> - Debian, <b>verificable-builds</b> - paulproteus @irc.freenode.org</li>
 	<li>(Position opened - this could be you)</li>
