@@ -52,12 +52,13 @@ ul.layers { font-style: normal; }
 ul.layers em, b.cool { font-size: 120%; font-style: normal; color: #008;}
 
 input[type="checkbox"]#button-layers + * {display:none;}
-input[type="checkbox"]#button-layers:checked + * {display:inherit; background:#DFE8FA; border: 1px dashed #ccc;}
+input[type="checkbox"]#button-layers:checked + * {display:inherit; border: 1px dashed #aaa;}
+/* input[type="checkbox"]#button-layers:checked + * {display:inherit; background:#DFE8FA; border: 1px dashed #ccc;} */
 input[type="checkbox"]#button-layers:checked + * {display:inherit;}
 
 /* #DFE8FA */
 input[type="checkbox"]#button-details2 + * {display:none;}
-input[type="checkbox"]#button-details2:checked + * {display:inherit; background:#DFE8FA; border: 1px dashed #ccc;}
+input[type="checkbox"]#button-details2:checked + * {display:inherit; border: 1px dashed #aaa;}
 input[type="checkbox"]#button-details2:hover + * {background:#EFF8CA;}
 
 
@@ -224,6 +225,11 @@ div.tab_breadcrumb { margin-right: 40px !important; }
 	border-bottom: none;
 	margin: 20px;
 	background-color: #dfe8fa;
+}
+
+.container:hover {
+	background-color: #d2dcf1;
+	/* d2dcf1 */
 }
 
 .innerbox {
