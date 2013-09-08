@@ -128,7 +128,362 @@ with firewalled tunnels in between, all compiled from source after you meet all 
 </div>
 </div>
 
+<div class="attributes">
+<br>
+Existing secure system comparison with Mempo.
+<table border="1">
+	<tr align="center"> 
+		<td><b>System</b></td>
+		<td><b>Mempo</b></td>  
+		<td><b>Tails</b></td> 
+		<td><b>Whonix</b></td> 
+		<td><b>QubesOS</b></td>
+		<td><b>Hardened<br>Gentoo</b></td>
+	</tr>
+
+	<tr align="center"> 
+		<td>Linux kernel with grsecurity</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td> 
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+	</tr>
+
+	<tr align="center">
+		<td>Grsecurity max protection settings</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>RBAC, PAX profiles</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Apps patched for PAX</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+	</tr>
+	<tr align="center">
+		<td>Hardened compiler</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Apps running in VMs</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td> 
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Toggle Tor VM</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>   
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>   
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Toggle darknet VM</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Apps user isolation + hardened VNC/XNEST</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td> 
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center">
+		<td>Tor, I2P, VPN, Freenet preconfigured</td>
+		<td align="center">
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>		
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>					
+		</td>
+		<td align="center">
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>		
+		</td>  
+		<td align="center">
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Stacking anonymizing networks</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Apps and networks anonymizing cooperation</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Antivirus apps binaries white list</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Multisign packages verification</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>   
+	</tr>
+	<tr align="center"> 
+		<td>Integration with hardware/open hardware</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Crowdfunding modules improving and adding (bounties)</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Real time threats warnings (community driven)</td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td><b></b></td>
+		<td align="center">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+</table>
 <br/>
+</div>
 
 <div class="attributes">
 <b>FAQ</b>-1: To clear any initial miss-conceptions or questions: Mempo <b>is</b>:
