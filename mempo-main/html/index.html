@@ -55,23 +55,13 @@ Roadmap will be described in detail later on this page.
 </div><!-- breadcrums -->
 
 <div id="navbar">
-	<center><b>Main Series</b></center>
+	<center><b>Mempo description</b></center>
 	<ul>
 		<li class="nav1"><a href="/" title="Start">
 			Start</a>
 		</li>
 	</ul>
-	<hr />
 
-	<center><b>Additional Information</b></center>
-	<ul>
-                <li class="nav1"><a href="index.html" title="Start">
-                        Start</a>
-                </li>
-	</ul>
-	<hr />
-
-	<div><p>(Page is under construction)</p></div>
 	<br/>
 </div><!-- navbar -->
 
@@ -143,7 +133,7 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 	</tr>
 
 	<tr align="center"> 
-		<td class="noname"><b>Live-CD/Primary OS/Packets</b></td>
+		<td class="noname"><b>Live-CD/Primary-OS/Packets</b></td>
 		<td align="center" class="w">
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>		
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
@@ -333,7 +323,27 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td class="network">VM: toggle Tor</td>
+		<td class="isolation">Hardened VNC&amp;Xnest isolation</td>
+		<td align="center" class="w">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td> 
+		<td align="center" class="h">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+
+
+	<tr align="center"> 
+		<td class="network">VM: easily toggle Tor, VPN</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -351,7 +361,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td class="network">VM: toggle Darknet, VPN, Tunnel</td>
+		<td class="network">VM: toggle Darknet, <abbr title="Firewall">FW</abbr>, Tunnel</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -364,24 +374,6 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>  
-	</tr>
-	<tr align="center"> 
-		<td class="isolation">Hardened VNC/Xnest</td>
-		<td align="center" class="w">
-		<img src="images/right.png" width="16" height="16" alt="Yes"/>
-		</td>    
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>   
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td> 
-		<td align="center" class="h">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
-		</td>   
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
@@ -440,7 +432,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td class="crypto">All Apps tuned to security systems</td>
+		<td class="crypto">All Apps and System uses <abbr title="apt-get, downloading sources, updates, alters, sending logs, all preconfigured to use the provided secure and private networks">privacy</abbr></td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -458,7 +450,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td class="crypto"><b>Verify-build</b>, white-list <abbr title="Anti Virus">AV</abbr></td>
+		<td class="crypto"><b>Verify-build</b>, multisign apt-get</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 			<sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup>
@@ -477,7 +469,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>   
 	</tr>
 	<tr align="center"> 
-		<td class="crypto">Multisign apt-get / packages</td>
+		<td class="crypto"> White-list <abbr title="Anti Virus">AV</abbr> and known-files DB </td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -883,7 +875,8 @@ The long address USK@... is a public-key, you can copy it into a Freenet server 
 		<li>Freenet: <abbr title="Freenet Messaging System - boards software that works with Freenet, get the C++ sources from Freenet main router page localhost:8888 then build it, and run it ./fms - then connect to localhost:8080. To write you need to create own ID and announce it"><b>FMS</b></abbr>
 		board freenet, linux as well as board mempo.
 		</li>
-		<li>Freenet: <abbr title="Freemail v2, uses WoT. This is na official plugin that you can enable in Configuration - Settings of freenet localhost:8888, also enable WebOfTrust plugin there, wait 1 hour, solve captchas under Community - Own Identities - Introduce, and then you can write to this address.">freemail</abbr> - mempo@ym7rkpjwhfcpiqbhbovz2gtiafthwmp6rmee6wmk3quekcvo2jgq.freemail
+		<li>Freenet: <abbr title="Freemail v2, uses WoT. This is na official plugin that you can enable in Configuration - Settings of freenet localhost:8888, also enable WebOfTrust plugin there, wait 1 hour, solve captchas under Community - Own Identities - Introduce, and then you can write to this address.">freemail</abbr> - 
+		<u class="freesite"><b>mempo@</b>ym7rkpjwhfcpiqbh<i>bovz2gtiafthwmp6rmee6wmk3quekcvo2jgq</i>.freemail
 		</li>
 	</ul>
 	</td>
