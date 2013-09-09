@@ -68,6 +68,9 @@ input[type="checkbox"]#button-details2 + * {display:none;}
 input[type="checkbox"]#button-details2:checked + * {display:inherit; border: 1px dashed #aaa;}
 input[type="checkbox"]#button-details2:hover + * {background:#EFF8CA;}
 
+.freesite { font-size: 80%; }
+.freesite { text-decoration: none; }
+.freesite i { font-size: 2px; }
 
 
 #hover1 div { display:none !important; }
