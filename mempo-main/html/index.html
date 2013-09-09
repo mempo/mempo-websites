@@ -145,7 +145,7 @@ Existing secure system comparison with Mempo.
 	<tr align="center"> 
 		<td>GrSecurity hardened Kernel</td>
 		<td align="center" class="y">
-		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		<img src="images/right.png" width="16" height="16" alt="Yes"/><sup><abbr title="pre-alpha version exists today">α</abbr></sup>
 		</td>  
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
@@ -162,9 +162,9 @@ Existing secure system comparison with Mempo.
 	</tr>
 
 	<tr align="center">
-		<td>Grsecurity max protection</td>
+		<td><b>GrSecurity max protection</b></td>
 		<td align="center" class="y">
-		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		<img src="images/right.png" width="16" height="16" alt="Yes"/><sup><abbr title="pre-alpha version exists today">α</abbr></sup>
 		</td>    
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
@@ -179,28 +179,11 @@ Existing secure system comparison with Mempo.
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 	</tr>
+
 	<tr align="center"> 
-		<td>GrSecurity RBAC+PAX profiles</td>
+		<td>GrSecurity PAX, <b>RBAC profiles</b></td>
 		<td align="center" class="y">
-		<img src="images/right.png" width="16" height="16" alt="Yes"/>
-		</td>    
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>   
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>   
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>  
-		<td align="center" class="y">
-		<img src="images/right.png" width="16" height="16" alt="Yes"/>
-		</td>  
-	</tr>
-	<tr align="center"> 
-		<td>Apps avoid unsafe code, PAX</td>
-		<td align="center" class="y">
-		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		<img src="images/right.png" width="16" height="16" alt="Yes"/><!-- <sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup> -->
 		</td>    
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
@@ -234,7 +217,52 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Apps running in VMs</td>
+		<td><b>Removed unsafe <abbr title="JIT - Just in Time compilation - increases speed of some applications but disabled protection.
+
+The PAX NO-EXEC is one of strongest (application-level) security systems - that can not be used with JIT. On typical distribution (almost every as of 2013) on the most critical components like Firefox browser, Javascript engines, Java VM, Python - the protection can NOT be used due to JIT being enabled and required.
+
+But we can patch applications to not use JIT runtime-compiled executable code, therefore using full PAX protection everywhere.
+We might offer 2 versions of some applications like java-secure and java-fast-jit to choose, defaulting to the secure one.
+">JIT code</b></abbr>; PAX</td>
+		<td align="center" class="y">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+
+	<tr align="center">
+		<td><b>Patching <abbr title="Patching ALL of the supported main privacy-oriented and security-oriented applications as soon as possible (without waiting for normal release cycle) in case of important bugs, or security bugs.">ALL</abbr> privacy problems</b></td>
+		<td align="center" class="y">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+			<sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup>
+		</td>    
+		<td align="center" class="y">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>   
+		<td align="center" class="y">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>?
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>?
+		</td>  
+	</tr>
+
+	<tr align="center"> 
+		<td>Running any App in VM isolation</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -252,7 +280,26 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Toggle Tor VM</td>
+		<td>Running any App in <abbr title="Hardened chroots - running applications as separate user in a chroot-jail from which there is no escape. 
+The typical chroot run on not hardened kernel is usually not so good as security barier. We use GrSecurity in configuration that closes many loopholes, thus turning the very light-weight chroot-jail into a strong security tool.">h-chroot</abbr> jail</td>
+		<td align="center" class="y">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>    
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td> 
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td> 
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>VM: toggle Tor</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -270,7 +317,7 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Toggle darknet VM</td>
+		<td>VM: toggle Darknet, VPN, Tunnel</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -288,7 +335,7 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Hardened VNC/XNEST chroot/VM</td>
+		<td>Hardened VNC/Xnest</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -306,12 +353,13 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center">
-		<td>Tor, I2P, Freenet, VPN preconfigured</td>
+		<td><b>Tor, I2P, Freenet, VPN</b> preconfigured</td>
 		<td align="center" class="y">
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>		
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>					
+			<sup><abbr title="pre-alpha version exists today">α</abbr></sup>
 		</td>
 		<td align="center" class="h">
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
@@ -339,9 +387,10 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Stacking anonymizing networks</td>
+		<td>Stacking networks e.g. VPN+I2P</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+			<sup><abbr title="pre-alpha version exists today">α</abbr></sup>
 		</td>    
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
@@ -357,7 +406,7 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>All Apps tuned to privacy networks</td>
+		<td>All Apps tuned to security systems</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -375,12 +424,13 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Antivirus apps binaries white list</td>
+		<td><b>Verify-build</b>, white-list <abbr title="Anti Virus">AV</abbr></td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+			<sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup>
 		</td>  
 		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>?
 		</td>  
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
@@ -388,12 +438,12 @@ Existing secure system comparison with Mempo.
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>  
+		<td align="center" class="h">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>   
 	</tr>
 	<tr align="center"> 
-		<td>Multisign packages verification</td>
+		<td>Multisign apt-get / packages</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -411,7 +461,7 @@ Existing secure system comparison with Mempo.
 		</td>   
 	</tr>
 	<tr align="center"> 
-		<td>Integration with open hardware</td>
+		<td>Integration with <b>open hardware</b></td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
@@ -429,7 +479,7 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Crowdfunding fixes</td>
+		<td><b>Crowdfunding</b> fixes, fast devel</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
@@ -462,6 +512,24 @@ Existing secure system comparison with Mempo.
 		</td>  
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+	<tr align="center"> 
+		<td>Paranoia-free lead developers</td>
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center" class="y">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>?
+		</td>  
+		<td align="center" class="y">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>?
+		</td>   
+		<td align="center" class="y">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>?
+		</td>  
+		<td align="center" class="y">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 	</tr>
 	<!--
