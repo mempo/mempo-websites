@@ -136,14 +136,14 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 		<td><b>System</b></td>
 		<td><abbr title="Mempo - as planned for Stage-1 or Stage-2, description and roadmap below."
 		><b>Mempo</b><sup>*</sup></abbr><br/><img src="images/mempo.v2.png" /><br/></td>  
-		<td><b>Tails</b><br/><img src="images/tails-logo-7.v3.png" /></td> 
-		<td><b>Whonix</b><br/><img src="images/whonix-logo135.v1.png" /></td> 
-		<td><b>QubesOS<br/><img src="images/qubesos-logo1.png" /></b></td>
-		<td><b>Gentoo-<abbr title="Hardened (Gentoo)">H</abbr><br/><img src="images/gentoo-hardened.v2.png" /></b></td>
+		<td><b>Tails</b><br/><a href="https://tails.boum.org/" target="blank"><img src="images/tails-logo-7.v3.png" /></a></td> 
+		<td><b>Whonix</b><br/><a href="https://www.whonix.org/wiki/Main_Page" target="blank"><img src="images/whonix-logo135.v1.png" /></a></td> 
+		<td><b>QubesOS<br/><a href="http://qubes-os.org/trac" target="blank"><img src="images/qubesos-logo1.png" /></a></b></td>
+		<td><b>Gentoo-<abbr title="Hardened (Gentoo)">H</abbr><br/><a href="https://wiki.gentoo.org/wiki/Project:Hardened" target="blank"><img src="images/gentoo-hardened.v2.png" /></a></b></td>
 	</tr>
 
 	<tr align="center"> 
-		<td><b>Live-CD/Primary OS/Packets</b></td>
+		<td class="noname"><b>Live-CD/Primary OS/Packets</b></td>
 		<td align="center" class="w">
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>		
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
@@ -176,7 +176,7 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 
 
 	<tr align="center"> 
-		<td>GrSecurity hardened Kernel</td>
+		<td class="grsec">GrSecurity hardened Kernel</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/><sup><abbr title="pre-alpha version exists today">α</abbr></sup>
 		</td>  
@@ -195,7 +195,7 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 	</tr>
 
 	<tr align="center">
-		<td><b>GrSecurity max protection</b></td>
+		<td class="grsec"><b>GrSecurity max protection</b></td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/><sup><abbr title="pre-alpha version exists today">α</abbr></sup>
 		</td>    
@@ -214,9 +214,9 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 	</tr>
 
 	<tr align="center"> 
-		<td>GrSecurity PAX, <b>RBAC profiles</b></td>
+		<td class="grsec">GrSecurity PAX, <b>RBAC profiles</b></td>
 		<td align="center" class="w">
-		<img src="images/right.png" width="16" height="16" alt="Yes"/><!-- <sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup> -->
+		<img src="images/right.png" width="16" height="16" alt="Yes"/><!-- <sup><abbr title="Work In Progress - working on this functions today">wip</abbr></sup> -->
 		</td>    
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
@@ -232,7 +232,7 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 		</td>  
 	</tr>
 	<tr align="center">
-		<td>Hardened compilations (fortify)</td>
+		<td class="grsec">Hardened compilations (fortify)</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -250,7 +250,7 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td><b>Removed unsafe <abbr title="JIT - Just in Time compilation - increases speed of some applications but disabled protection.
+		<td class="grsec"><b>Removed unsafe <abbr title="JIT - Just in Time compilation - increases speed of some applications but disabled protection.
 
 The PAX NO-EXEC is one of strongest (application-level) security systems - it removes most of typical attacks (that need to introduce own data as binary shell code).
 And this strong protection - sadly can not be used with JIT. On typical distribution (almost every as of 2013) on the most critical components like Firefox browser, Javascript engines, Java VM, Python - this protection does NOT work because of JIT.
@@ -276,7 +276,7 @@ We might offer 2 versions of some applications like java-secure and java-fast-ji
 	</tr>
 
 	<tr align="center">
-		<td><b>Patching <abbr title="Patching ALL of the supported main privacy-oriented and security-oriented applications as soon as possible (without waiting for normal release cycle) in case of important bugs, or security bugs.">ALL</abbr> privacy problems</b></td>
+		<td class="noname"><b>Patching <abbr title="Patching ALL of the supported main privacy-oriented and security-oriented applications as soon as possible (without waiting for normal release cycle) in case of important bugs, or security bugs.">ALL</abbr> privacy problems</b></td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 			<sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup>
@@ -296,7 +296,7 @@ We might offer 2 versions of some applications like java-secure and java-fast-ji
 	</tr>
 
 	<tr align="center"> 
-		<td>Running any App in VM isolation</td>
+		<td class="isolation">Running any App in VM isolation</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -314,7 +314,7 @@ We might offer 2 versions of some applications like java-secure and java-fast-ji
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Running any App in <abbr title="Hardened chroots - running applications as separate user in a chroot-jail from which there is no escape. 
+		<td class="isolation">Running any App in <abbr title="Hardened chroots - running applications as separate user in a chroot-jail from which there is no escape. 
 The typical chroot run on not hardened kernel is usually not so good as security barier. We use GrSecurity in configuration that closes many loopholes, thus turning the very light-weight chroot-jail into a strong security tool.">H-chroot</abbr> jail</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
@@ -333,7 +333,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>VM: toggle Tor</td>
+		<td class="network">VM: toggle Tor</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -351,7 +351,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>VM: toggle Darknet, VPN, Tunnel</td>
+		<td class="network">VM: toggle Darknet, VPN, Tunnel</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -369,7 +369,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Hardened VNC/Xnest</td>
+		<td class="isolation">Hardened VNC/Xnest</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -387,7 +387,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center">
-		<td><b>Tor, I2P, Freenet, VPN</b> preconfigured</td>
+		<td class="network"><b>Tor, I2P, Freenet, VPN</b> preconfigured</td>
 		<td align="center" class="y">
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>		
@@ -421,7 +421,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Stacking networks e.g. VPN+I2P</td>
+		<td class="network">Stacking networks e.g. VPN+I2P</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 			<sup><abbr title="pre-alpha version exists today">α</abbr></sup>
@@ -440,7 +440,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>All Apps tuned to security systems</td>
+		<td class="crypto">All Apps tuned to security systems</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -458,7 +458,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td><b>Verify-build</b>, white-list <abbr title="Anti Virus">AV</abbr></td>
+		<td class="crypto"><b>Verify-build</b>, white-list <abbr title="Anti Virus">AV</abbr></td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 			<sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup>
@@ -477,7 +477,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>   
 	</tr>
 	<tr align="center"> 
-		<td>Multisign apt-get / packages</td>
+		<td class="crypto">Multisign apt-get / packages</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
@@ -495,7 +495,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>   
 	</tr>
 	<tr align="center"> 
-		<td>Integration with <b>open hardware</b></td>
+		<td class="other">Integration with <b>open hardware</b></td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
@@ -513,7 +513,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td><b>Crowdfunding</b> fixes, fast devel</td>
+		<td class="other"><b>Crowdfunding</b> fixes, fast devel</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
@@ -531,26 +531,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Real time threats warnings</td>
-		<td align="center" class="w">
-		<img src="images/right.png" width="16" height="16" alt="Yes"/>
-		</td>  
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>  
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>   
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>  
-		<td align="center">
-		<img src="images/wrong.png" width="16" height="16" alt="No"/>
-		</td>  
-	</tr>
-
-	<tr align="center"> 
-		<td>Buy prebuilt on <abbr title="For now we can choose best 2-3 models from available hardware on the market. In future, we plan to switch to using trully Open-Hardware devices as they become viable option in given market segment">most open hardware</abbr></td>
+		<td class="other">Real time threats warnings</td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
@@ -569,7 +550,26 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 
 	<tr align="center"> 
-		<td>Paranoia-free lead developers</td>
+		<td class="other">Buy prebuilt on <abbr title="For now we can choose best 2-3 models from available hardware on the market. In future, we plan to switch to using trully Open-Hardware devices as they become viable option in given market segment">most open hardware</abbr></td>
+		<td align="center" class="w">
+		<img src="images/right.png" width="16" height="16" alt="Yes"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>   
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+		<td align="center">
+		<img src="images/wrong.png" width="16" height="16" alt="No"/>
+		</td>  
+	</tr>
+
+	<tr align="center"> 
+		<td class="other">Paranoia-free lead developers</td>
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
