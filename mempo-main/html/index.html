@@ -219,7 +219,8 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 	<tr align="center"> 
 		<td><b>Removed unsafe <abbr title="JIT - Just in Time compilation - increases speed of some applications but disabled protection.
 
-The PAX NO-EXEC is one of strongest (application-level) security systems - that can not be used with JIT. On typical distribution (almost every as of 2013) on the most critical components like Firefox browser, Javascript engines, Java VM, Python - the protection can NOT be used due to JIT being enabled and required.
+The PAX NO-EXEC is one of strongest (application-level) security systems - it removes most of typical attacks (that need to introduce own data as binary shell code).
+And this strong protection - sadly can not be used with JIT. On typical distribution (almost every as of 2013) on the most critical components like Firefox browser, Javascript engines, Java VM, Python - this protection does NOT work because of JIT.
 
 But we can patch applications to not use JIT runtime-compiled executable code, therefore using full PAX protection everywhere.
 We might offer 2 versions of some applications like java-secure and java-fast-jit to choose, defaulting to the secure one.
