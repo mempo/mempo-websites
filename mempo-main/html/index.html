@@ -131,19 +131,20 @@ with firewalled tunnels in between, all compiled from source after you meet all 
 <div class="attributes">
 <br>
 Existing secure system comparison with Mempo.
-<table border="1">
+<table border="1" class="systems_comparsion">
 	<tr align="center"> 
 		<td><b>System</b></td>
-		<td><b>Mempo</b></td>  
-		<td><b>Tails</b></td> 
-		<td><b>Whonix</b></td> 
-		<td><b>QubesOS</b></td>
-		<td><b>Hardened<br>Gentoo</b></td>
+		<td><abbr title="Mempo - as planned for Stage-1 or Stage-2, description and roadmap below."
+		><b>Mempo</b><sup>*</sup></abbr><br/><img src="images/mempo.v2.png" /><br/></td>  
+		<td><b>Tails</b><br/><img src="images/tails-logo-7.v3.png" /></td> 
+		<td><b>Whonix</b><br/><img src="images/whonix-logo135.v1.png" /></td> 
+		<td><b>QubesOS<br/><img src="images/qubesos-logo1.png" /></b></td>
+		<td><b>Gentoo-<abbr title="Hardened (Gentoo)">H</abbr><br/><img src="images/gentoo-hardened.v2.png" /></b></td>
 	</tr>
 
 	<tr align="center"> 
-		<td>Linux kernel with grsecurity</td>
-		<td align="center">
+		<td>GrSecurity hardened Kernel</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
@@ -155,14 +156,14 @@ Existing secure system comparison with Mempo.
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td> 
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 	</tr>
 
 	<tr align="center">
-		<td>Grsecurity max protection settings</td>
-		<td align="center">
+		<td>Grsecurity max protection</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -174,13 +175,13 @@ Existing secure system comparison with Mempo.
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>RBAC, PAX profiles</td>
-		<td align="center">
+		<td>GrSecurity RBAC+PAX profiles</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -192,13 +193,13 @@ Existing secure system comparison with Mempo.
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Apps patched for PAX</td>
-		<td align="center">
+		<td>Apps avoid unsafe code, PAX</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -210,13 +211,13 @@ Existing secure system comparison with Mempo.
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 	</tr>
 	<tr align="center">
-		<td>Hardened compiler</td>
-		<td align="center">
+		<td>Hardened compilations (fortify)</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -228,22 +229,22 @@ Existing secure system comparison with Mempo.
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 	</tr>
 	<tr align="center"> 
 		<td>Apps running in VMs</td>
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>   
-		<td align="center">
+		<td align="center" class="h">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td> 
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
@@ -252,16 +253,16 @@ Existing secure system comparison with Mempo.
 	</tr>
 	<tr align="center"> 
 		<td>Toggle Tor VM</td>
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>   
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>   
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>
 		<td align="center">
@@ -270,7 +271,7 @@ Existing secure system comparison with Mempo.
 	</tr>
 	<tr align="center"> 
 		<td>Toggle darknet VM</td>
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -287,8 +288,8 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Apps user isolation + hardened VNC/XNEST</td>
-		<td align="center">
+		<td>Hardened VNC/XNEST chroot/VM</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -297,7 +298,7 @@ Existing secure system comparison with Mempo.
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td> 
-		<td align="center">
+		<td align="center" class="h">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>   
 		<td align="center">
@@ -305,26 +306,26 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center">
-		<td>Tor, I2P, VPN, Freenet preconfigured</td>
-		<td align="center">
+		<td>Tor, I2P, Freenet, VPN preconfigured</td>
+		<td align="center" class="y">
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>		
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>					
 		</td>
-		<td align="center">
+		<td align="center" class="h">
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
 		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
 		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
 		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
 		</td>   
-		<td align="center">
+		<td align="center" class="h">
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
 		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
 		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
 		<img src="images/wrong2.png" width="10" height="16" alt="No"/>		
 		</td>  
-		<td align="center">
+		<td align="center" class="h">
 		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
 		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
 		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
@@ -339,13 +340,13 @@ Existing secure system comparison with Mempo.
 	</tr>
 	<tr align="center"> 
 		<td>Stacking anonymizing networks</td>
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>   
-		<td align="center">
+		<td align="center" class="h">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -356,14 +357,14 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Apps and networks anonymizing cooperation</td>
-		<td align="center">
+		<td>All Apps tuned to privacy networks</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>   
-		<td align="center">
+		<td align="center" class="h">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -375,7 +376,7 @@ Existing secure system comparison with Mempo.
 	</tr>
 	<tr align="center"> 
 		<td>Antivirus apps binaries white list</td>
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
@@ -393,7 +394,7 @@ Existing secure system comparison with Mempo.
 	</tr>
 	<tr align="center"> 
 		<td>Multisign packages verification</td>
-		<td align="center">
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -405,13 +406,13 @@ Existing secure system comparison with Mempo.
 		<td align="center">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
-		<td align="center">
+		<td align="center" class="h">
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>/<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>   
 	</tr>
 	<tr align="center"> 
-		<td>Integration with hardware/open hardware</td>
-		<td align="center">
+		<td>Integration with open hardware</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
@@ -428,8 +429,8 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Crowdfunding modules improving and adding (bounties)</td>
-		<td align="center">
+		<td>Crowdfunding fixes</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
@@ -446,8 +447,8 @@ Existing secure system comparison with Mempo.
 		</td>  
 	</tr>
 	<tr align="center"> 
-		<td>Real time threats warnings (community driven)</td>
-		<td align="center">
+		<td>Real time threats warnings</td>
+		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
@@ -463,6 +464,7 @@ Existing secure system comparison with Mempo.
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
 	</tr>
+	<!--
 	<tr align="center"> 
 		<td><b></b></td>
 		<td align="center">
@@ -481,6 +483,7 @@ Existing secure system comparison with Mempo.
 		<img src="images/wrong.png" width="16" height="16" alt="No"/>
 		</td>  
 	</tr>
+	-->
 </table>
 <br/>
 </div>
