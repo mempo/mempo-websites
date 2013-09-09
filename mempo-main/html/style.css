@@ -56,10 +56,11 @@ p {
 .systems_comparsion .w { background-color: #cf8; font-size: 15px;}
 
 .systems_comparsion .grsec { background-color: #D6BEFF }
-.systems_comparsion .network { background-color: #FFD383 }
+.systems_comparsion .isolation { background-color:  #FFD383 }  
+.systems_comparsion .network { background-color: #9999FF }
+.systems_comparsion .apps { background-color: #B5FFFE }
 .systems_comparsion .crypto { background-color: #FFCEE9 }
-.systems_comparsion .other { background-color: #EDFF8C } 
-.systems_comparsion .isolation { background-color: #B5FFFE }  
+.systems_comparsion .other { background-color: #8cffbf } 
 .systems_comparsion .noname { background-color: #FFCFD1 } 
 
 ul.layers { font-style: normal; }
