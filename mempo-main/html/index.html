@@ -143,6 +143,39 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 	</tr>
 
 	<tr align="center"> 
+		<td><b>Live-CD/Primary OS/Packets</b></td>
+		<td align="center" class="w">
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>		
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
+		<img src="images/right2.png" width="10" height="16" alt="Yes"/>
+		</td>  
+		<td align="center" class="h">
+		<img src="images/right2.png" width="10" height="16" alt="No"/> 
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/> 
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/> 
+		</td>  
+		<td align="center" class="h">
+		<img src="images/right2.png" width="10" height="16" alt="No"/>
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/> 
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>	 
+			<sup><abbr title="Host operation system required">*</abbr></sup>	
+		</td>   
+		<td align="center" class="h">
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/> 
+		<img src="images/right2.png" width="10" height="16" alt="No"/> 
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		</td>  
+		<td align="center" class="h">
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/> 
+		<img src="images/right2.png" width="10" height="16" alt="No"/> 
+		<img src="images/wrong2.png" width="10" height="16" alt="No"/>
+		</td>  
+	</tr>
+
+
+
+
+	<tr align="center"> 
 		<td>GrSecurity hardened Kernel</td>
 		<td align="center" class="y">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/><sup><abbr title="pre-alpha version exists today">α</abbr></sup>
@@ -182,7 +215,7 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 
 	<tr align="center"> 
 		<td>GrSecurity PAX, <b>RBAC profiles</b></td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/><!-- <sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup> -->
 		</td>    
 		<td align="center">
@@ -200,7 +233,7 @@ Comparison of existing systems with Mempo (as <b>planned</b> in Stage-1 and 2 - 
 	</tr>
 	<tr align="center">
 		<td>Hardened compilations (fortify)</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -225,7 +258,7 @@ And this strong protection - sadly can not be used with JIT. On typical distribu
 But we can patch applications to not use JIT runtime-compiled executable code, therefore using full PAX protection everywhere.
 We might offer 2 versions of some applications like java-secure and java-fast-jit to choose, defaulting to the secure one.
 ">JIT code</b></abbr>; PAX</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -244,7 +277,7 @@ We might offer 2 versions of some applications like java-secure and java-fast-ji
 
 	<tr align="center">
 		<td><b>Patching <abbr title="Patching ALL of the supported main privacy-oriented and security-oriented applications as soon as possible (without waiting for normal release cycle) in case of important bugs, or security bugs.">ALL</abbr> privacy problems</b></td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 			<sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup>
 		</td>    
@@ -264,7 +297,7 @@ We might offer 2 versions of some applications like java-secure and java-fast-ji
 
 	<tr align="center"> 
 		<td>Running any App in VM isolation</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -283,7 +316,7 @@ We might offer 2 versions of some applications like java-secure and java-fast-ji
 	<tr align="center"> 
 		<td>Running any App in <abbr title="Hardened chroots - running applications as separate user in a chroot-jail from which there is no escape. 
 The typical chroot run on not hardened kernel is usually not so good as security barier. We use GrSecurity in configuration that closes many loopholes, thus turning the very light-weight chroot-jail into a strong security tool.">H-chroot</abbr> jail</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -301,7 +334,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 	<tr align="center"> 
 		<td>VM: toggle Tor</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center" class="y">
@@ -319,7 +352,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 	<tr align="center"> 
 		<td>VM: toggle Darknet, VPN, Tunnel</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -337,7 +370,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 	<tr align="center"> 
 		<td>Hardened VNC/Xnest</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -408,7 +441,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 	<tr align="center"> 
 		<td>All Apps tuned to security systems</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -426,7 +459,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 	<tr align="center"> 
 		<td><b>Verify-build</b>, white-list <abbr title="Anti Virus">AV</abbr></td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 			<sup><abbr title="Work In Profress - working on this functions today">wip</abbr></sup>
 		</td>  
@@ -445,7 +478,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 	<tr align="center"> 
 		<td>Multisign apt-get / packages</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>    
 		<td align="center">
@@ -463,7 +496,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 	<tr align="center"> 
 		<td>Integration with <b>open hardware</b></td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
@@ -481,7 +514,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 	<tr align="center"> 
 		<td><b>Crowdfunding</b> fixes, fast devel</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
@@ -499,7 +532,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 	<tr align="center"> 
 		<td>Real time threats warnings</td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
@@ -518,7 +551,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 
 	<tr align="center"> 
 		<td>Buy prebuilt on <abbr title="For now we can choose best 2-3 models from available hardware on the market. In future, we plan to switch to using trully Open-Hardware devices as they become viable option in given market segment">most open hardware</abbr></td>
-		<td align="center" class="y">
+		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
 		<td align="center">
