@@ -48,8 +48,12 @@ p {
 .legend { font-size: 80%; }
 .thewarning1 { color: #500; }
 
-.systems_comparsion .y { background-color: #6f6; }
-.systems_comparsion .h { background-color: #cf8; }
+.systems_comparsion { font-size: 12px;}
+
+
+.systems_comparsion .y { background-color: #6f6; font-size: 15px; }
+.systems_comparsion .h { background-color: #FFFF00;font-size: 15px; } 
+.systems_comparsion .w { background-color: #cf8; font-size: 15px;}
 
 ul.layers { font-style: normal; }
 ul.layers em, b.cool { font-size: 120%; font-style: normal; color: #008;}
