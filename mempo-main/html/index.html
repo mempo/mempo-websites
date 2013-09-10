@@ -510,7 +510,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 
 	<tr align="center"> 
-		<td class="other">Integration with <b>open hardware</b></td>
+		<td class="other">Provides custom <b>open hardware</b></td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
@@ -1074,6 +1074,46 @@ None (<abbr title="We all want to use our own product.">Eat own dog food</abbr>
 	</div> <!-- container -->
 <!-- /TOPIC -->
 
+
+<!-- TOPIC -->
+	<div class="container">
+		<div class="boxhead">
+			<h2>Mempo source-code</h2>
+		</div>
+		<div class="innerbox">
+		<!--   hack necessary because putting padding and width: 100% on the same element confuses firefox & konqueror (at least)   -->
+		<div class="innerinnerbox">
+<!-- topic text -->
+Editing code is very easy. To edit <b>this website</b> over <b>github</b>:
+<pre>
+For users with GitHub account:
+On https://github.com/mempo/mempo-websites use <b>fork repository</b>.
+$ <b>git clone</b> git@github.com:<i>your-username</i>/mempo-websites.git # download over Internet
+$ (edit files)  # also git add <i>new_file</i> # if you added files
+$ <b>git commit</b> -a -m "<i>your comment</i>"
+$ <b>git push</b> # send over Internet
+</pre>
+
+<h3>Git branches standard</h3>
+<pre>
+For bigger sub-projects that need a release cycle:
+<b>next</b>   - active development: adding new ideas. Goal: code here compiles, makes work possible.
+<b>master</b> - good unstable version: fixing bugs and making things work. Goal: no bugs here.
+alpha  - branched from master when a nice bug-free version was chosen since no important known bugs
+beta   - branched from alpha when all meaningful bugs where removed
+rc     - branched from beta after fixing all bugs, after testing for some time
+stable - fully released official version
+
+For simple projects like websites, other documentation:
+master - version that is published
+next   - WIP
+</pre>
+
+<!-- /topic text -->
+		</div>
+		</div>
+	</div> <!-- container -->
+<!-- /TOPIC -->
 
 
 
