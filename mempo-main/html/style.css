@@ -55,12 +55,12 @@ p {
 .systems_comparsion .h { background-color: #FFFF00;font-size: 15px; } 
 .systems_comparsion .w { background-color: #cf8; font-size: 15px;}
 
-.systems_comparsion .grsec { background-color: #D6BEFF }
+.systems_comparsion .grsec { background-color: #DFBFFF }
 .systems_comparsion .network { background-color: #FFD383 }
-.systems_comparsion .crypto { background-color: #FFCEE9 }
+.systems_comparsion .crypto { background-color: #FFB6B6 }
 .systems_comparsion .other { background-color: #EDFF8C } 
 .systems_comparsion .isolation { background-color: #B5FFFE }  
-.systems_comparsion .noname { background-color: #FFCFD1 } 
+.systems_comparsion .noname { background-color: #B6B8FF } 
 
 ul.layers { font-style: normal; }
 ul.layers em, b.cool { font-size: 120%; font-style: normal; color: #008;}
