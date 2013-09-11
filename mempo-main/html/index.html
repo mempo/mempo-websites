@@ -1123,16 +1123,10 @@ $ <b>git push</b> # send over Internet
 <h3>Git branches standard</h3>
 <pre>
 For bigger sub-projects that need a release cycle:
-<b>next</b>   - active development: adding new ideas. Goal: code here compiles, makes work possible.
-<b>master</b> - good unstable version: fixing bugs and making things work. Goal: no bugs here.
-alpha  - branched from master when a nice bug-free version was chosen since no important known bugs
-beta   - branched from alpha when all meaningful bugs where removed
-rc     - branched from beta after fixing all bugs, after testing for some time
-stable - fully released official version
-
-For simple projects like websites, other documentation:
-master - version that is published
-next   - WIP
+<b>master</b> - active development; On selected users - the semi-stable version. More stable versions marked with tags.
+alpha  - frozen for internal tests
+beta   - frozen for everyone to use and test
+stable - fully tested very stable version. Only bugfixes should go there, untill next release.
 </pre>
 
 <!-- /topic text -->
