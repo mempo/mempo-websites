@@ -510,7 +510,7 @@ The typical chroot run on not hardened kernel is usually not so good as security
 	</tr>
 
 	<tr align="center"> 
-		<td class="other">Integration with <b>open hardware</b></td>
+		<td class="other">Provides custom <b>open hardware</b></td>
 		<td align="center" class="w">
 		<img src="images/right.png" width="16" height="16" alt="Yes"/>
 		</td>  
@@ -1071,6 +1071,80 @@ None (<abbr title="We all want to use our own product.">Eat own dog food</abbr>
 
 
 
+	</div> <!-- container -->
+<!-- /TOPIC -->
+
+
+<!-- TOPIC -->
+	<div class="container">
+		<div class="boxhead">
+			<h2>Mempo roadmap</h2>
+		</div>
+		<div class="innerbox">
+		<!--   hack necessary because putting padding and width: 100% on the same element confuses firefox & konqueror (at least)   -->
+		<div class="innerinnerbox">
+<!-- topic text -->
+
+This project is ambitious in scope - it will be release in stages.
+
+<h3>Stage 1</h3>
+
+Addon to Debian that makes it hardened (Kernel, PAX) and allows easy, secure, private, compartment-based use for communication, publishing, e-currencies.
+
+<ul>
+	<li>Kernel: GrSecurity, PAX, on max settings</li>
+	<li>Grsecurity profiles (like FW+AV rules) for main software</li>
+	<li>Hardened-compilation of important software</li>
+	<li>Executable code anti-troyan hardening of some applications (removing JIT), with allowing also the -fast version</li>
+	<li>Firewall on Host</li>
+	<li>Easy creation of VMs</li>
+	<li>Easy execution of important applications in isolation (chroot, secured Xnest?)</li>
+	<li>Easy toggle of VM settings: Tor, VPN, Darknet</li>
+	<li>One-click access to no-censorship storage darknet: Freenet with FMS (boards) and Sone (twitter)</li>
+	<li>One-click access to no-censorship darknet: including id3nt twitter, darknet-IRC (irc2p), darknet-chat (jabber?)</li>
+	<li>One-click access to break-prism applications, many preconfigured for Tor where possible</li>
+	<li>Repository</li>
+	<li>Verificable builds</li>
+	<li>Secure multi-signed build</li>
+</ul>
+
+<!-- /topic text -->
+		</div>
+		</div>
+	</div> <!-- container -->
+<!-- /TOPIC -->
+
+<!-- TOPIC -->
+	<div class="container">
+		<div class="boxhead">
+			<h2>Mempo source-code</h2>
+		</div>
+		<div class="innerbox">
+		<!--   hack necessary because putting padding and width: 100% on the same element confuses firefox & konqueror (at least)   -->
+		<div class="innerinnerbox">
+<!-- topic text -->
+Editing code is very easy. To edit <b>this website</b> over <b>github</b>:
+<pre>
+For users with GitHub account:
+On https://github.com/mempo/mempo-websites use <b>fork repository</b>.
+$ <b>git clone</b> git@github.com:<i>your-username</i>/mempo-websites.git # download over Internet
+$ (edit files)  # also git add <i>new_file</i> # if you added files
+$ <b>git commit</b> -a -m "<i>your comment</i>"
+$ <b>git push</b> # send over Internet
+</pre>
+
+<h3>Git branches standard</h3>
+<pre>
+For bigger sub-projects that need a release cycle:
+<b>master</b> - active development; On selected users - the semi-stable version. More stable versions marked with tags.
+alpha  - frozen for internal tests
+beta   - frozen for everyone to use and test
+stable - fully tested very stable version. Only bugfixes should go there, untill next release.
+</pre>
+
+<!-- /topic text -->
+		</div>
+		</div>
 	</div> <!-- container -->
 <!-- /TOPIC -->
 
