@@ -1149,7 +1149,188 @@ stable - fully tested very stable version. Only bugfixes should go there, untill
 <!-- /TOPIC -->
 
 
+<!-- TOPIC -->
+	<div class="container">
+		<div class="boxhead">
+			<h2>Threats to security and anonymity</h2>
+		</div>
+		<div class="innerbox">
+		<!--   hack necessary because putting padding and width: 100% on the same element confuses firefox & konqueror (at least)   -->
+		<div class="innerinnerbox">
+<!-- topic text -->
 
+Even most secure computer cannot protect user against all threats, especially, when user don't know much about them. This is why education is one of the most important modules of Mempo.
+
+<table border="1" class="threats">
+	<tr> 
+		<td><b>Threats</b><br></td>  
+		<td><b>Possible results</b></td> 
+		<td><b>Mempo protection</b></td> 
+	</tr>
+
+	<tr>
+		<td><b>Monitoring email, instant messaging communications</b> by villans, governments, corporations<br></td>
+		<td><li>User sensitive data exposure</li>
+			<li>User identity compromised</li></td>  
+		<td>Using PGP encrypted e-mail communication, OTR in instant messaging.</td>
+	</tr>
+
+	<tr>
+		<td><b>IP/location discovery</b><br> 
+		by villans, governments, corporations to find inconvenient journalists, bloggers.</td>
+		<td><li>User identity compromised</li> </td>  
+		<td>Using anonymizing networks like Tor, I2P, Freenet to public posts, articles.</td>
+	</tr>
+
+	<tr>
+		<td><b>DNS protocol leak protection</b><br>
+		 https://www.dnsleaktest.com<br>
+		 https://www.grc.com/dns/dns.htm</td>
+		<td><li> ISP can log and monitor your activity </li></td>
+		<td>Using free, open DNS servers (OpenNIC project)</td>
+	</tr>
+
+	<tr>
+		<td><b>Password attack</b><br>
+				Attacker for example tries to crack the password-protected file. </td> 
+		<td><li>Passwords compromised.</li> </td>  
+		<td>Using only strong passwords, replacing passwords with strong encryption keys whenever possible.</td>
+	</tr>
+
+	<tr>
+		<td><b>Computer stealing</b><br> </td> 
+		<td><li>Physical access to computer.</li>
+				<li>Access to data on hard disk.</li>
+</td>  
+		<td>Hard disk encryption</td>
+	</tr>
+
+	<tr>
+		<td><b>Powered computer stealing</b><br> </td> 
+		<td><li>Physical access to computer.</li>
+				<li>User sensitive data exposure</li></td>  
+		<td>Cleaning RAM memory when going to shutdown, new SysRq (Panic button?), RFID blocking device</td>
+	</tr>
+
+
+		<td><b>Software backdoor </b><br>
+Part of program source code allowing to bypass authentication, securing illegal remote access to a computer, while attempting to remain undetected.<br>
+Detailed description: http://en.wikipedia.org/wiki/Backdoor_%28computing%29<br>
+Example: http://en.wikipedia.org/wiki/NSAKEY
+ </td> 
+		<td><li>Unauthorized access to the system</li></td>  
+		<td>Runnig application in virtual machine intended only for this application. </td>
+	</tr>
+	
+
+	<tr>	
+		<td> <b>Hardware backdoor</b><br>
+Similar to software but built in computer hardware</td> 
+		<td><li>Unauthorized access to the system</li></td>
+		<td>Using open hardware only.</td>
+	</tr>
+
+	<tr>
+		<td><b>Rootkit</b>
+				A rootkit is a stealthy type of software, often malicious, designed to hide the existence of certain processes or programs from normal methods of detection and enable continued privileged access to a computer.<br>
+Detailed description: http://en.wikipedia.org/wiki/Rootkit<br>
+Examples: http://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal</td>
+		<td><li></li></td>
+		<td>Using only open source firmware.</td>
+	</tr>
+
+	<tr>
+		<td><b>Trojan Horse</b>
+				
+Detailed description:<br>
+Example: </td>
+		<td><li></li></td>
+		<td>?</td>
+	</tr>
+
+	<tr>
+		<td><b>Identity Spoofing (IP Address Spoofing)</b><br>
+		Attacker may fake IP address so the victim thinks it is sent from a location that it 			is not actually from.</td> 
+		<td><li>Attacker can access to the local network with a valid IP address.</li></td>  
+		<td>?</td>
+	</tr>
+	
+	<tr>
+		<td><b>Packet sniffing</b><br>
+		Interception of data packets traversing a network</td> 
+		<td><li>Passwords compromised.</li>
+				<li>User sensitive data exposure</li></td>
+		<td>Using only encrypted communication, using HTTPS Everywhere</td>  
+	</tr>
+	
+	<tr>
+		<td><b>Man-in-the-middle attack (hijacking)</b><br>
+			Attacker is actively monitoring, capturing, and controlling communication between two victims.</td> 
+		<td><li>Attacker captures and modify messages in communication.</li>
+<li>Attacker is eavesdropping encrypted communication.</li></td>
+		<td>?</td>   
+	</tr>
+
+	<tr>
+		<td><b>Cold-boot attack</b> <br>
+Attack requiring physical access to computer, right after cold reboot. </td> 
+		<td><li>Private keys compromised.</li>
+ </td>  
+		<td>Cleaning RAM memory when going to shutdown, SysRq, RFID</td>
+	</tr>
+
+	<tr>
+		<td><b>Evil maid attack</b><br>
+Attack requiring physical access to computer which use disk encryption.  </td> 
+		<td><li>Passwords to encrypted volume compromised.</li>
+ </td>  
+		<td>?</td>
+	</tr>
+
+	<tr>
+		<td><b> Social engineering </b><br>
+Attacker uses persuasion or deception to gain access to information systems.</td> 
+		<td><li>Passwords compromised</li>
+				<li>User sensitive data exposure</li> </td>  
+		<td>Education: Never trust anyone with your paswords, private keys, or sensitive data</td>
+	</tr>
+
+	<tr>
+		<td><b>Phishing</b><br>
+Attacker attempting to acquire information such as usernames, passwords, and credit card details by masquerading as a trustworthy entity in an electronic communication, e.g. bank website. Phishing is typically carried out by email spoofing or instant messaging. </td> 
+		<td><li>User sensitive data exposure</li>
+				<li>Passwords compromised </li></td>  
+		<td>?</td>
+	</tr>
+
+	<tr>
+		<td><b>Quantum computer cryptography</b><br>
+				In the near future quantum computers will be powerful enough to break some of presently popular cryptografic algorithms</td> 
+		<td><li>User sensitive data exposure</li>
+				<li>Passwords compromised</li></td>
+		<td>?</td>
+	</tr>
+
+	<tr>	
+		<td><b>DNS poisoning</b><br>
+Attack where DNS information is falsified. </td> 
+		<td><li>?</li></td>
+		<td>?</td>
+	</tr>
+
+	<tr>
+		<td><b>...</b></td>
+		<td><li>...</li></td>
+		<td>...</td>
+	</tr>
+
+</table>
+
+<!-- /topic text -->
+		</div>
+		</div>
+	</div> <!-- container -->
+<!-- /TOPIC -->
 
 
 </div><!-- content -->
