@@ -1,4 +1,3 @@
-
 body {
 	border: 2px solid #8face3;
 	background-color: #ffffff;
@@ -55,13 +54,13 @@ p {
 .systems_comparsion .h { background-color: #FFFF00;font-size: 15px; } 
 .systems_comparsion .w { background-color: #cf8; font-size: 15px;}
 
-.systems_comparsion .grsec { background-color: #D6BEFF }
+.systems_comparsion .grsec { background-color: #DFCBFF }
 .systems_comparsion .isolation { background-color:  #FFD383 }  
-.systems_comparsion .network { background-color: #9999FF }
+.systems_comparsion .network { background-color: #C5DBE2 }
 .systems_comparsion .apps { background-color: #B5FFFE }
 .systems_comparsion .crypto { background-color: #FFCEE9 }
 .systems_comparsion .other { background-color: #8cffbf } 
-.systems_comparsion .noname { background-color: #FFCFD1 } 
+.systems_comparsion .noname { background-color: #FFF2AE }  
 
 ul.layers { font-style: normal; }
 ul.layers em, b.cool { font-size: 120%; font-style: normal; color: #008;}
