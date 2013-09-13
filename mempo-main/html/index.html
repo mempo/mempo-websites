@@ -1169,30 +1169,32 @@ Even most secure computer cannot protect user against all threats, especially, w
 	</tr>
 
 	<tr>
-		<td><b>Monitoring email, instant messaging communications</b> by villans, governments, corporations<br></td>
+		<td><b>Monitoring like email, instant messaging, VoIP communication</b> by villans, governments, corporations<br>
+		Example: <a href="http://en.wikipedia.org/wiki/File:PRISM_Collection_Details.jpg">PRISM collection details</a></td>
 		<td><li>User sensitive data exposure</li>
 			<li>User identity compromised</li></td>  
-		<td>Using PGP encrypted e-mail communication, OTR in instant messaging.</td>
+		<td>Using only strongly encrypted communication. PGP encrypted e-mail communication, OTR in instant messaging.</td>
 	</tr>
 
 	<tr>
 		<td><b>IP/location discovery</b><br> 
-		by villans, governments, corporations to find inconvenient journalists, bloggers.</td>
+		by villans, governments, corporations to find for example inconvenient journalists, bloggers.</td>
 		<td><li>User identity compromised</li> </td>  
 		<td>Using anonymizing networks like Tor, I2P, Freenet to public posts, articles.</td>
 	</tr>
 
 	<tr>
 		<td><b>DNS protocol leak protection</b><br>
-		 https://www.dnsleaktest.com<br>
-		 https://www.grc.com/dns/dns.htm</td>
+		<a href="https://www.dnsleaktest.com">https://www.dnsleaktest.com</a><br>
 		<td><li> ISP can log and monitor your activity </li></td>
 		<td>Using free, open DNS servers (OpenNIC project)</td>
 	</tr>
 
 	<tr>
-		<td><b>Password attack</b><br>
-				Attacker for example tries to crack the password-protected file. </td> 
+		<td><b>Password cracking</b><br>
+		Attacker for example tries to crack the password-protected file.<br>
+		Detailed description: <a href="http://en.wikipedia.org/wiki/Password_cracking">http://en.wikipedia.org/wiki/Password_cracking</a>
+		Example: <a href="http://www.cert.org/incident_notes/IN-98.03.html">http://www.cert.org/incident_notes/IN-98.03.html</a></td> 
 		<td><li>Passwords compromised.</li> </td>  
 		<td>Using only strong passwords, replacing passwords with strong encryption keys whenever possible.</td>
 	</tr>
@@ -1200,51 +1202,52 @@ Even most secure computer cannot protect user against all threats, especially, w
 	<tr>
 		<td><b>Computer stealing</b><br> </td> 
 		<td><li>Physical access to computer.</li>
-				<li>Access to data on hard disk.</li>
-</td>  
-		<td>Hard disk encryption</td>
+			<li>Access to data on hard disk.</li>
+			<li>Lost of data</li>
+		</td>  
+		<td>Hard disk encryption. Secure, encrypted backups.</td>
 	</tr>
 
 	<tr>
 		<td><b>Powered computer stealing</b><br> </td> 
 		<td><li>Physical access to computer.</li>
-				<li>User sensitive data exposure</li></td>  
-		<td>Cleaning RAM memory when going to shutdown, new SysRq (Panic button?), RFID blocking device</td>
+			<li>User sensitive data exposure</li>
+			<li>Cold-boot attack possibility</li>
+		</td>
+		<td>Cleaning RAM memory when going to shutdown, new SysRq (Panic button?) cleaning RAM, RFID (or somethng similar) blocking device</td>
 	</tr>
 
 
 		<td><b>Software backdoor </b><br>
-Part of program source code allowing to bypass authentication, securing illegal remote access to a computer, while attempting to remain undetected.<br>
-Detailed description: <a href="http://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal">http://en.wikipedia.org/wiki/Backdoor_%28computing%29<br></a>
-Example: <a href="http://en.wikipedia.org/wiki/NSAKEY"> http://en.wikipedia.org/wiki/NSAKEY</a>
- </td> 
+			Part of program source code allowing to bypass authentication, securing illegal remote access to a computer, while attempting to remain undetected.<br>
+			Detailed description: <a href="http://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal">http://en.wikipedia.org/wiki/Backdoor_%28computing%29<br></a>
+			Example: <a href="http://en.wikipedia.org/wiki/NSAKEY"> http://en.wikipedia.org/wiki/NSAKEY</a>
+		</td> 
 		<td><li>Unauthorized access to the system</li></td>  
-		<td>Runnig application in virtual machine intended only for this application. </td>
+		<td>Runnig hi risk application in virtual machine intended only for this application. Strong isolation.</td>
 	</tr>
 	
-
-	<tr>	
+	<tr>
 		<td> <b>Hardware backdoor</b><br>
-Similar to software but built in computer hardware</td> 
+			Similar to software but built in computer hardware</td> 
 		<td><li>Unauthorized access to the system</li></td>
 		<td>Using open hardware only.</td>
 	</tr>
 
 	<tr>
 		<td><b>Rootkit</b>
-				A rootkit is a stealthy type of software, often malicious, designed to hide the existence of certain processes or programs from normal methods of detection and enable continued privileged access to a computer.<br>
-Detailed description: <a href="http://en.wikipedia.org/wiki/Rootkit" >http://en.wikipedia.org/wiki/Rootkit<br></a>
-Examples: <a href="http://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal">http://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal</td>
-		<td><li></li></td>
-		<td>Using only open source firmware.</td>
+			A rootkit is a stealthy type of software, often malicious, designed to hide the existence of certain processes or programs from normal methods of detection and enable continued privileged access to a computer.<br>
+			Detailed description: <a href="http://en.wikipedia.org/wiki/Rootkit" >http://en.wikipedia.org/wiki/Rootkit<br></a>
+			Examples: <a href="http://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal">http://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal</td>
+		<td><li>?</li></td>
+		<td>Using only open source software.</td>
 	</tr>
 
 	<tr>
 		<td><b>Trojan Horse</b>
-				Imitates a normal application, but implements hidden to users, undesirable functions. <br>
-				  
-Detailed description: <a href= "https://en.wikipedia.org/wiki/Trojan_horse_%28computing%29">https://en.wikipedia.org/wiki/Trojan_horse_%28computing%29</br>
-Example: </td>
+			Imitates a normal application, but implements hidden to users, undesirable functions. Often including a backdoor<br>	  
+			Detailed description: <a href= "https://en.wikipedia.org/wiki/Trojan_horse_%28computing%29">https://en.wikipedia.org/wiki/Trojan_horse_%28computing%29</br>
+			Example:<a href="http://nakedsecurity.sophos.com/zeroaccess2/">ZeroAccess</a> </td>
 		<td><li>Unauthorized access to the system, data, passwords theft</li></td>
 		<td>Running untrusted application in strong isolation</td>
 	</tr>
