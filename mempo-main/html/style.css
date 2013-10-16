@@ -75,15 +75,16 @@ p {
 .legend { font-size: 80%; }
 .thewarning1 { color: #A12D0E; }/*primary-3*/
 
+.systems_comparsion {border-collapse: collapse;
+					border: 1px solid black;}
 .systems_comparsion { font-size: 12px;}
-
 
 .systems_comparsion .y { background-color: #6f6; font-size: 15px; }
 .systems_comparsion .h { background-color: #FFFF00;font-size: 15px; } 
 .systems_comparsion .w { background-color: #cf8; font-size: 15px;}
 
 .systems_comparsion .grsec { background-color: #DFCBFF }
-.systems_comparsion .isolation { background-color:  #FFD383 }  
+.systems_comparsion .isolation { background-color: #FFD383 }  
 .systems_comparsion .network { background-color: #C5DBE2 }
 .systems_comparsion .apps { background-color: #B5FFFE }
 .systems_comparsion .crypto { background-color: #FFCEE9 }
@@ -91,8 +92,9 @@ p {
 .systems_comparsion .noname { background-color: #FFF2AE } 
 
 
-/*.threats { background-color: white }*/
-
+.threats { border-collapse: collapse;
+			border: 1px solid black;}
+.threats { font-size: 12px;}
 
 ul.layers { font-style: normal; }
 ul.layers em, b.cool { font-size: 120%; font-style: normal; color: #A12D0E;}
@@ -253,14 +255,14 @@ div.tab_breadcrumb { margin-right: 40px !important; }
 	background-color: #ffffff;
 	margin: 20px;
 	padding: 10px;
-	border: 1px solid black;
+	border: 0px solid black;
 }
 
 .boxhead {
 	background-color: #55A6CE;
 	margin: 0px;
 	padding: 5px;
-	border-bottom: 1px solid black;
+	border-bottom: 0px solid black;
 }
 
 .boxhead h2 {
@@ -270,7 +272,7 @@ div.tab_breadcrumb { margin-right: 40px !important; }
 
 .container {
 	padding: 0px;
-	border: 1px solid black;
+	border: 0px solid black;
 	border-bottom: none;
 	margin: 20px;
 	background-color: #ffffff;
@@ -284,7 +286,7 @@ div.tab_breadcrumb { margin-right: 40px !important; }
 .innerbox {
 	width: 100%;
 	padding-bottom: 10px;
-	border-bottom: 1px solid black;
+	border-bottom: 0px solid black;
 }
 
 .innerinnerbox {
