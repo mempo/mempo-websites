@@ -1,0 +1,92 @@
+<pre>
+
+A critical bug was discovered in lib ssl that allows attacker to read random 64 KB of memory of any process that uses libssl.
+
+<a href="http://heartbleed.com/"
+>http://heartbleed.com/</a>
+
+<a href="http://seclists.org/oss-sec/2014/q2/22"
+>http://seclists.org/oss-sec/2014/q2/22</a>
+
+<a href="http://www.openssl.org/news/secadv_20140407.txt"
+>http://www.openssl.org/news/secadv_20140407.txt</a>
+
+
+Copy of the bug report:
+---------------------------------------
+OpenSSL Security Advisory [07 Apr 2014]
+========================================
+
+TLS heartbeat read overrun (CVE-2014-0160)
+==========================================
+
+A missing bounds check in the handling of the TLS heartbeat extension can be
+used to reveal up to 64k of memory to a connected client or server.
+
+Only 1.0.1 and 1.0.2-beta releases of OpenSSL are affected including
+1.0.1f and 1.0.2-beta1.
+
+Thanks for Neel Mehta of Google Security for discovering this bug and to
+Adam Langley &lt;agl@chromium.org&gt; and Bodo Moeller &lt;bmoeller@acm.org&gt; for
+preparing the fix.
+
+Affected users should upgrade to OpenSSL 1.0.1g. Users unable to immediately
+upgrade can alternatively recompile OpenSSL with -DOPENSSL_NO_HEARTBEATS.
+
+1.0.2 will be fixed in 1.0.2-beta2.
+---------------------------------------
+
+===========================================================
+Comment by Mempo security team:
+
+This bug implications seem to be that an attacker could potentially read any memory of affected programs and 
+compromise of all the data; 
+Including all secrets, passwords, private keys, bitcoin private keys (!), irc logins and so on.
+
+We recommend that users should turn off the affected applications,
+upgrade the system to version that fixes this issue,
+and consider all accounts compromised.
+
+In case of crypto-currencies like bitcoin, users probably would like to move their savings to freshly generated addresses.
+Warning: 
+0. The SSL seems to be used only in RPC/API, not for p2p communication with other nodes, so this is would be not trivial to exploit this problem to attack any/all nodes over Internet.
+1. Do not panic (do not lose money by sending to wrong address in a hurry), first prepare, make backups of old and new wallets/addresses.
+2. Bitcoin pre-generates pool of spare private-keys (addresses). You should take care to generate actually new keys. One might want to start with a fresh new wallet.
+Be sure to not lose any money by moving or deleting wallets in a hurry.
+3. While moving more then 1 address, be mindful of possible correlation privacy leaks:
+3.a. When sending money from account A to account X (X being in new wallet or freshly generated), bitcoind (and other wallets perhaps?) 
+could sometime take money from other account B if you sent the full amount but there was money missing to pay the txfee; This will result in A-B addresses correlation.
+3.b. Timing attack, if you move your 5-10 addresses at once it's likelly they are owned by same person.
+4. In conclusion it could be best to move now the biggest account, and later carefully recycle all other savings.
+5. If you already published old address e.g. for donations or trade or pools or as payout address elsewhere, remember to keep the old wallet just in case.
+
+Affected programs:
+* bitcoind
+* other bitcoind-based programs
+* irssi
+* xchat
+* probably others
+
+
+You could test it like this, for various programs:
+
+ldd /usr/bin/irssi | grep ssl
+        libssl.so.1.0.0 =&gt; /usr/lib/x86_64-linux-gnu/libssl.so.1.0.0 (0x000002c21954b000)
+
+so yes, irssi does link to libssl and is therefore affected.
+
+---------------------------------------
+
+Mempo actions: currently (2014-04-07) Mempo consists only of hardened kernel on top of Debian, so there
+is no action we can take other then warn users;
+
+This highlights why it will be important to in future create/use mechanism to auto-close known vulnerable 
+applications and auto-restart them (both things should be user-configurable and default to stop on critical vuln).
+
+
+<a href="http://mempo.org/"
+>mempo.org</a> Mempo Project - Hardened Privacy 
+
+</pre>
+
+
