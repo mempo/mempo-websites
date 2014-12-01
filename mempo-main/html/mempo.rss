@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Mempo Project - Hardened Privacy</title>
+
+<link>http://mempo.org</link>
+	<description>This RSS contains new about Mempo project - hardened privacy - grsecurity hardened debian, open hardware and so on</description>
+	<language>en-us</language>
+
+	<atom:link href="http://mempo.org/mempo.rss" rel="self" type="application/rss+xml" />
+
+	<lastBuildDate>Tue, 10 Apr 2014 10:00:01 GMT</lastBuildDate>
+
+
+
+<item>
+<guid>rssmempoid000005</guid>
+<title>Mempo products and philosophy planned in PDF</title>
+<link>http://p.suchdig.com/p/fnb-mempo_product_philosophy_pdf.pdf</link>
+<pubDate>Tue, 10 Apr 2014 10:00:01 GMT</pubDate>
+<description><![CDATA[<pre>
+http://p.suchdig.com/p/fnb-mempo_product_philosophy_pdf.pdf
+
+freenet:CHK@Gtmu30uFbj-NcvbLIywLkEVRoFl4vxW0xbjKddy-6~4,MJQNDX1vTgNaCXe2wynPSFRfsvqwMvHpx2DRjxa4ud0,AAMC--8/fnb-mempo_product_philosophy_pdf.pdf
+
+Please do comment on this plan, on reddit/r/mempo , on FMS board public and mempo or on irc #mempo oftc
+</pre>]]></description>
+</item>
+
+
+<item>
+<guid>rssmempoid000004</guid>
+<title>security issue #2 - lib ssl bug</title>
+<link>http://mempo.org/memposec/issue2.html</link>
+<pubDate>Mon, 08 Apr 2014 00:00:01 GMT</pubDate>
+<description>
+
+<![CDATA[
+<pre>
+
+A critical bug was discovered in lib ssl that allows attacker to read random 64 KB of memory of any process that uses libssl.
+
+<a href="http://heartbleed.com/"
+>http://heartbleed.com/</a>
+
+<a href="http://seclists.org/oss-sec/2014/q2/22"
+>http://seclists.org/oss-sec/2014/q2/22</a>
+
+<a href="http://www.openssl.org/news/secadv_20140407.txt"
+>http://www.openssl.org/news/secadv_20140407.txt</a>
+
+
+Copy of the bug report:
+---------------------------------------
+OpenSSL Security Advisory [07 Apr 2014]
+========================================
+
+TLS heartbeat read overrun (CVE-2014-0160)
+==========================================
+
+A missing bounds check in the handling of the TLS heartbeat extension can be
+used to reveal up to 64k of memory to a connected client or server.
+
+Only 1.0.1 and 1.0.2-beta releases of OpenSSL are affected including
+1.0.1f and 1.0.2-beta1.
+
+Thanks for Neel Mehta of Google Security for discovering this bug and to
+Adam Langley &lt;agl@chromium.org&gt; and Bodo Moeller &lt;bmoeller@acm.org&gt; for
+preparing the fix.
+
+Affected users should upgrade to OpenSSL 1.0.1g. Users unable to immediately
+upgrade can alternatively recompile OpenSSL with -DOPENSSL_NO_HEARTBEATS.
+
+1.0.2 will be fixed in 1.0.2-beta2.
+---------------------------------------
+
+===========================================================
+Comment by Mempo security team:
+
+This bug implications seem to be that an attacker could potentially read any memory of affected programs and 
+compromise of all the data; 
+Including all secrets, passwords, private keys, bitcoin private keys (!), irc logins and so on.
+
+We recommend that users should turn off the affected applications,
+upgrade the system to version that fixes this issue,
+and consider all accounts compromised.
+
+In case of crypto-currencies like bitcoin, users probably would like to move their savings to freshly generated addresses.
+Warning: 
+0. The SSL seems to be used only in RPC/API, not for p2p communication with other nodes, so this is would be not trivial to exploit this problem to attack any/all nodes over Internet.
+1. Do not panic (do not lose money by sending to wrong address in a hurry), first prepare, make backups of old and new wallets/addresses.
+2. Bitcoin pre-generates pool of spare private-keys (addresses). You should take care to generate actually new keys. One might want to start with a fresh new wallet.
+Be sure to not lose any money by moving or deleting wallets in a hurry.
+3. While moving more then 1 address, be mindful of possible correlation privacy leaks:
+3.a. When sending money from account A to account X (X being in new wallet or freshly generated), bitcoind (and other wallets perhaps?) 
+could sometime take money from other account B if you sent the full amount but there was money missing to pay the txfee; This will result in A-B addresses correlation.
+3.b. Timing attack, if you move your 5-10 addresses at once it's likelly they are owned by same person.
+4. In conclusion it could be best to move now the biggest account, and later carefully recycle all other savings.
+5. If you already published old address e.g. for donations or trade or pools or as payout address elsewhere, remember to keep the old wallet just in case.
+
+Affected programs:
+* bitcoind
+* other bitcoind-based programs
+* irssi
+* xchat
+* probably others
+
+
+You could test it like this, for various programs:
+
+ldd /usr/bin/irssi | grep ssl
+        libssl.so.1.0.0 =&gt; /usr/lib/x86_64-linux-gnu/libssl.so.1.0.0 (0x000002c21954b000)
+
+so yes, irssi does link to libssl and is therefore affected.
+
+---------------------------------------
+
+Mempo actions: currently (2014-04-07) Mempo consists only of hardened kernel on top of Debian, so there
+is no action we can take other then warn users;
+
+This highlights why it will be important to in future create/use mechanism to auto-close known vulnerable 
+applications and auto-restart them (both things should be user-configurable and default to stop on critical vuln).
+
+
+<a href="http://mempo.org/"
+>mempo.org</a> Mempo Project - Hardened Privacy 
+
+</pre>
+]]>
+</description>
+</item>
+
+
+
+
+
+
+<item>
+<guid>rssmempoid000003</guid>
+<title>[tag] v0.1.37-02-rc sources for testing</title>
+<link>https://github.com/mempo/deterministic-kernel/commit/da2502198775600d99b0646b99395632ec9a34d6</link>
+<pubDate>Mon, 07 Apr 2014 16:20:00 GMT</pubDate>
+<description>
+Please build and test this version
+
+https://github.com/mempo/deterministic-kernel/commit/da2502198775600d99b0646b99395632ec9a34d6
+
+linux-image (linux-3.2.56-mempo-0.1.37) UNRELEASED; urgency=low
+  * update kernel to linux-3.2.56
+  * update grsecurity to grsecurity-3.0-3.2.56-201404062126
+  * grsecurity changelog updated
+  * updated checksums
+  * new seed
+  * v0.1.37-01-rc
+  * Added missing grsecurity patch
+  * v0.1.37-02-rc
+</description>
+</item>
+
+<item>
+<guid>rssmempoid000002</guid>
+<title>mempo-v0.1.36-06-release download</title>
+<link>http://mempo.org/</link>
+<pubDate>Mon, 07 Apr 2014 16:00:00 GMT</pubDate>
+<description>
+mempo-v0.1.36-06-release of kernel 3.2.55 with grsecurity and built in deterministic way
+
+Checksums sha256sum:
+5200c1f522a3ce244351fe26bea9a279757a641fc6270f99756cff84256abc5f  linux-headers-3.2.55-grsec-mempo.good.0.1.36_06_amd64.deb
+e852876d28e539abb373eb413455cc4ccdb7feb5e51b7324ccdcea388087dd52  linux-image-3.2.55-grsec-mempo.good.0.1.36_06_amd64.deb
+
+Files on Freenet:
+CHK@cH3rJZT6gcsZT~VPBroDul-BUckBXG~emSnqcHvgOrI,61zTTyDiLPWXJFjQHa1wl8iRaBgChVFQIL-2Y60-aXc,AAMC--8/linux-headers-3.2.55-grsec-mempo.good.0.1.36_06_amd64.deb
+CHK@kjiJilpY5Fayt4kYCUr7oouMGpZIoJwcAtQktkKvIlE,~oHW3Nod6UgdUox~SZPX4uBD~BG13WcEBbXquWQQdCo,AAMC--8/linux-headers-3.2.55-grsec-mempo.good.0.1.36_06_amd64.deb.asc
+CHK@uPBIIsgp2PpPBvxJheKTHNpIX5lotMfTG4wvdB2Yv0o,r-ZuDlUVsZOVrkjpuUgnDmbj-860rYwyMCnHEKIPlHE,AAMC--8/linux-image-3.2.55-grsec-mempo.good.0.1.36_06_amd64.deb
+CHK@y-3Wf1T4Y9lg19HPToIsuioxcfJmXB8XynS6-SSEc0c,cQRAb-FfmN82atSRqCx6aIVR3kQ~~BsE0eQHuMZTZws,AAMC--8/linux-image-3.2.55-grsec-mempo.good.0.1.36_06_amd64.deb.asc
+</description>
+</item>
+
+<item>
+<title>RSS test</title>
+<link>http://mempo.org/</link>
+<guid>rssmempoid000001</guid>
+<pubDate>Mon, 07 Apr 2014 00:00:01 GMT</pubDate>
+<description>Test RSS item.
+
+One, two, three.
+
+</description>
+</item>
+</channel>
+
+</rss>
+
