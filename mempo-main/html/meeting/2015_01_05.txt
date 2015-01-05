@@ -21,6 +21,8 @@ DONE: (T) we now offer hardened kernel, with pax flags(A), in apt-get repository
 DONE: We have http://deb.mempo.org webiste, also via .i2p and via Freenet (addresses are on the page)
 DONE: (T) apt-get works over freenet :) this is first time ever. Details are on the page. Apt-get is configured by i.sh install script.
 
+TODO: use the newer reproducible dpkg developed at #debian-reproducible https://reproducible.debian.net
+
 DONE: simple pax_flags.sh script configured programs like firefox, java to disable some of strong Pax protections that kill programs using JIT.
 TODO: the pax_flags.sh should be packed in a .deb, with dpkg triggers (man 1 deb-triggers) to observe /usr/[s]bin , /[s]bin, to reapply flags on binary programs upgrade
 
@@ -48,6 +50,15 @@ DONE:
 TODO: 3.14 ?
 TODO: Kali ?
 TODO: other?
+
+--- tigusoft.pl ---
+
+TODO: provide a dumb install script that locally builds and installs in ~/.local/ llvm compiler at least
+TODO: provide a nice .deb of more recent gcc version needed by developers for C++11
+TODO: provide a nice .deb of more recent llvm version needed by developers for C++11
+Test or backport, release to mempo repository.
+See if build can be made deterministic.
+
 
 --- other groups ---
 
