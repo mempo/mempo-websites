@@ -14,7 +14,7 @@ Hi guys! This is our progress, and what help we look for (HELP), including trivi
 See this document and connectd links, and prepare any questions and we will gladly reply to them on the meeting;
 Or just tell us what you need/want. Or offer to help even just test stuff.
 
---- rfree, mempo, vyrly ---
+--- rfree, mempo, vyrly on kernel, pax, apt-get ---
 
 DONE: (T) we now offer hardened kernel, with pax flags(A), in apt-get repository accessible from internet and darknet Freenet(E) and i2p(E) and Tor, we also support Freenet board system FMS(M).
 
@@ -44,14 +44,14 @@ TODO: above solution has downside of not deleting old versions like 0.1.96, it s
 HELP: provide a .deb with TBB, verify it's build (I hope it is determinitic) so we can push that to our repo
 HELP: provide a script to run kvm image with Tails one-time OS - looking for developer. Probably make a .deb with run-tails script, and deb with the iso image.
 
---- kocka ---
+--- kocka on newer kernels ---
 
 DONE:
 TODO: 3.14 ?
 TODO: Kali ?
 TODO: other?
 
---- tigusoft.pl ---
+--- tigusoft.pl on compilers ---
 
 TODO: provide a dumb install script that locally builds and installs in ~/.local/ llvm compiler at least
 TODO: provide a nice .deb of more recent gcc version needed by developers for C++11
@@ -59,6 +59,14 @@ TODO: provide a nice .deb of more recent llvm version needed by developers for C
 Test or backport, release to mempo repository.
 See if build can be made deterministic.
 
+--- dg, lg on i2p ---
+
+i2pbote is a plugin for i2p (geti2p.net) that offers hihgly secure, remailed-based (like mixmaster) 
+highlevel onion-routed email, traveling over i2p, and not needing any servers at all.
+
+DONE: i2pbote mailer - questions how it works - dg
+TODO: i2pbote basic security audit (does it not have obvious problems) - dg?
+TODO: i2pbote deterministic build and includion in mempo repositoru as i2p-i2pbote package - db, rfree?
 
 --- other groups ---
 
