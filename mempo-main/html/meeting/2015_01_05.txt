@@ -10,7 +10,7 @@ Tags used here: (E)=experimental (A)=not automated, trivial admin work required.
 
 Please, read this before joining :)
 
-Hi guys! This is our progress, and what help we loop for (HELP), including trivial work or testers marked as (T).
+Hi guys! This is our progress, and what help we look for (HELP), including trivial work or testers marked as (T).
 See this document and connectd links, and prepare any questions and we will gladly reply to them on the meeting;
 Or just tell us what you need/want. Or offer to help even just test stuff.
 
