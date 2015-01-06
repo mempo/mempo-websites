@@ -926,7 +926,7 @@ No-Javascript/plugins in selected profiles. Easy usage of services: OpenStreetMa
 <!-- TOPIC -->
 	<div class="container">
 		<div class="boxhead">
-			<h2>Steps to get secure Mempo</h2>
+			<h2 id="steps">Steps to get secure Mempo</h2>
 		</div>
 		<div class="innerbox">
 		<!--   hack necessary because putting padding and width: 100% on the same element confuses firefox & konqueror (at least)   -->
@@ -937,8 +937,22 @@ Take following steps to best configure your system up to the Mempo standard.
 	<li>Install Debian 7 x86_64 on your computer</li>
 	<li>Add Mempo APT repository as in <a href="http://deb.mempo.org">deb.mempo.org</a> (or .i2p)</li>
 	<li>Install Mempo kernel as described there. Including grsec sysfs settings and pax fattr flags.</li>
-	<li>Install Tor, configure with proper options</li>
-	<li>Install Privoxy, configure with proper options to use Tor</li>
+	<li>Install Tor, configure with proper options:
+		<pre>As root, configure this and restart tor.
+In file <b>/etc/tor/torrc</b> find line with "<b>SockPort</b>" (or add it) and add there following options so it will read as:
+<b>SocksPort 9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol  IsolateDestPort IsolateDestAddr</b>
+This is very important, otherwise same <b>Tor circuit is re-used</b> even for different programs and servers making it much easier to correlate your various activities!
+<b>TEST:</b> To test if that works, open few "what is my IP" pages and verify if they show different IP each usually
+Som pages to test IP (open this is Tor-enabled browser that uses the main system Tor): <a href="http://mempo.org/ip/">http://mempo.org/ip/</a> or <a href="http://myipinfo.net/">http://myipinfo.net/</a>
+		</pre>
+	</li>
+	<li>Install Privoxy, configure with proper options to use Tor:
+		<pre>As root, configure this and restart privoxy:
+In file <b>/etc/privoxy/config</b> uncomment (or add) following line: 
+forward-socks5   / 127.0.0.1:9050 .
+<b>TEST</b>: get a browser that does NOT integrate with Tor directly, and merly configure in it a http proxy 127.0.0.1:8118 and check your IP on web pages (best disable javascript first).
+		</pre>
+	</li>
 	<li>Configure (for each user) GPG client configuration as in 
 		<a href="https://github.com/rfree/fossoffice/blob/master/settings/gpg/gpg.conf">github.com/rfree/fossoffice gpg.conf</a></li>
 </ul>
