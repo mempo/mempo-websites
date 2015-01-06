@@ -5,7 +5,10 @@ require "../../../../lib/jsonrpcphp/includes/jsonRPCClient.php";
 $chain_name = 'litecoin';
 
 $user='litecoinrpc';
-$pass='7dJwUwgUK1CyE61NjRnmbuNm6KifqGDVmbxUmTvDMUP8';
+
+require_once 'password.LOCAL.php';
+
+$pass=$rpcpassword;
 
 $bitcoin = new jsonRPCClient("http://$user:$pass@127.0.0.1:9332/");
 //var_dump($bitcoin);
