@@ -1,0 +1,80 @@
+
+Mempo progress meeting 2015-01-05.
+STATUS: draft
+PLACE: #mempo on irc.oftc.net + relays freenode, irc2p, FLIP
+URL: https://github.com/mempo/mempo-websites/new/master/mempo-main/html also user github.com/rfree2/ 
+
+Tags used here: (E)=experimental (A)=not automated, trivial admin work required. (M)=manual work required. (D)=devel required to finish it.
+
+=== PLAN of the meeting ====
+
+Please, read this before joining :)
+
+Hi guys! This is our progress, and what help we look for (HELP), including trivial work or testers marked as (T).
+See this document and connectd links, and prepare any questions and we will gladly reply to them on the meeting;
+Or just tell us what you need/want. Or offer to help even just test stuff.
+
+--- rfree, mempo, vyrly on kernel, pax, apt-get ---
+
+DONE: (T) we now offer hardened kernel, with pax flags(A), in apt-get repository accessible from internet and darknet Freenet(E) and i2p(E) and Tor, we also support Freenet board system FMS(M).
+
+DONE: We have http://deb.mempo.org webiste, also via .i2p and via Freenet (addresses are on the page)
+DONE: (T) apt-get works over freenet :) this is first time ever. Details are on the page. Apt-get is configured by i.sh install script.
+
+TODO: use the newer reproducible dpkg developed at #debian-reproducible https://reproducible.debian.net
+
+DONE: simple pax_flags.sh script configured programs like firefox, java to disable some of strong Pax protections that kill programs using JIT.
+TODO: the pax_flags.sh should be packed in a .deb, with dpkg triggers (man 1 deb-triggers) to observe /usr/[s]bin , /[s]bin, to reapply flags on binary programs upgrade
+
+TODO: a freenet-dumb-installer.sh that makes user srv_fn, downloads freenet installer .jar, checksums/GPG checks, runs it (yeap I know this is not the best way)
+TODO: a freenet-dumb-installer.deb (yes I know this is not the best way) that does the above later
+HELP: maybe someone wants to develop a real serious .deb installer for Freenet? Some work was started on this.
+
+TODO: a .deb with FMS (freenet message system)
+
+TODO: publish in repository the .deb of libpoco that fixes utf8 bug. The solution is not fully the Debian-Way but works: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=671477 just need to publish it. Our solution is reproducible build script: https://github.com/mempo/mempo-deb/tree/master/pack/poco but is uses odd script and does not have a deb-src
+HELP: Someone could make a real debian package for the libpoco fix in form of deb orig tar gz + debian patch so we can generate deb + deb-src.
+HELP: Someone could make a real fix for libpoco not just a work around; AFAIR the patch is not a preferred solution for Debian because it duplicates library symbols?
+HELP: (T) someone with freenet: could keep-alive our repository and also run the script that keeps downloading our files as posted on FMS.
+HELP: (T) someone with a server: could run an automatic mirror spider of deb.mempo.org to his server, and tell us to list him as backup.
+
+TODO: make the kernels have a package with same name so that aptitude upgrade does upgrade it, instead of manual search for newest kernel. We have a solution in form of virtual package e.g. linux-image-3.2-mempo-servmax that will depend on the newest kernel release like mempo 0.1.97.
+TODO: above solution has downside of not deleting old versions like 0.1.96, it should have some conflict or recommend remove field? Just markign it for auto-removal might not be enough as linux-image* packages AFAIK are by default retained and not cleared from apt local cache, using disk space in /var/. We must remove the package installation to clear disk space in /lib/modules/ and /boot/ (and for security - old kernels)
+
+HELP: provide a .deb with TBB, verify it's build (I hope it is determinitic) so we can push that to our repo
+HELP: provide a script to run kvm image with Tails one-time OS - looking for developer. Probably make a .deb with run-tails script, and deb with the iso image.
+
+--- kocka on newer kernels ---
+
+DONE:
+TODO: 3.14 ?
+TODO: Kali ?
+TODO: other?
+
+--- tigusoft.pl on compilers ---
+
+TODO: provide a dumb install script that locally builds and installs in ~/.local/ llvm compiler at least
+TODO: provide a nice .deb of more recent gcc version needed by developers for C++11
+TODO: provide a nice .deb of more recent llvm version needed by developers for C++11
+Test or backport, release to mempo repository.
+See if build can be made deterministic.
+
+--- dg, lg on i2p ---
+
+i2pbote is a plugin for i2p (geti2p.net) that offers hihgly secure, remailed-based (like mixmaster) 
+highlevel onion-routed email, traveling over i2p, and not needing any servers at all.
+
+DONE: i2pbote mailer - questions how it works - dg
+TODO: i2pbote basic security audit (does it not have obvious problems) - dg?
+TODO: i2pbote deterministic build and includion in mempo repositoru as i2p-i2pbote package - db, rfree?
+
+--- other groups ---
+
+
+
+
+
+
+
+
+
