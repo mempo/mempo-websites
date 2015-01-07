@@ -1,9 +1,19 @@
 
-Mempo progress meeting 2015-01-05.
-STATUS: draft
+Mempo progress meeting 2015-01-06 21:00 UTC. (was initially planned for 2015-01-05.txt)
+STATUS: done
 PLACE: #mempo on irc.oftc.net + relays freenode, irc2p, FLIP
-URL: https://github.com/mempo/mempo-websites/new/master/mempo-main/html also user github.com/rfree2/ 
+DATE: 2015-01-06 21:00 UTC
+Document-URL-src: https://github.com/mempo/mempo-websites/new/master/mempo-main/html also user github.com/rfree2/ 
+Document-URL-pub: http://mempo.org/meeting/2015_01_05.txt and mirrored to www.mempo.i2p/... and in future to freenet USK@
 
+Scroll down to see the Summary of this talk, and later the full log.
+ _____  _             
+|  __ \| |            
+| |__) | | __ _ _ __  
+|  ___/| |/ _` | '_ \ 
+| |    | | (_| | | | |
+|_|    |_|\__,_|_| |_|
+                      
 Tags used here: (E)=experimental (A)=not automated, trivial admin work required. (M)=manual work required. (D)=devel required to finish it.
 
 === PLAN of the meeting ====
@@ -68,13 +78,464 @@ DONE: i2pbote mailer - questions how it works - dg
 TODO: i2pbote basic security audit (does it not have obvious problems) - dg?
 TODO: i2pbote deterministic build and includion in mempo repositoru as i2p-i2pbote package - db, rfree?
 
---- other groups ---
+  _____                                            
+ / ____|                                           
+| (___  _   _ _ __ ___  _ __ ___   __ _ _ __ _   _ 
+ \___ \| | | | '_ ` _ \| '_ ` _ \ / _` | '__| | | |
+ ____) | |_| | | | | | | | | | | | (_| | |  | |_| |
+|_____/ \__,_|_| |_| |_|_| |_| |_|\__,_|_|   \__, |
+                                              __/ |
+                                             |___/ 
+
+The meeting took place as planned.
+
+Clarified mempo for users: freeroute, cryptoferret, prot0n, legit, irea.
+	
+New goal: make i2p-i2pbote that packages i2pbote plugin; Deterministic build. str4d, kytv are upstream
+New goal: research banana-pi / r-pi for secure hardware e.g. to run secure Darknet. CPU firmware blob?
+New goal: patch irssi to by default hide realname, username (=nick), make it easy to change, easy to randomize.
+New goal: 3.14 builds
+New goal: i386 builds, <legit> offers
+New goal: use git-issues as bugtracker for now, and FMS boards, and i2p irc - document it.
+New goal: make roadmap on www (not in irc log)
+New goal: mirror www.mempo.org the same way as deb.mempo.org (not in irc log)
+New goal: find more anonymous developers and auditors
+New goal: donations address
+New goal: package bitcoin, monero 
+
+<legit> rfreeman: i'll keep you updated if i can provide you a 32b kernel - just to know: is it possible to make reproductible builds on airgapped machines ?\
+<dawuud> Tahoe-LAFS storage servers then i create a mempo APT mirror like this: https://gist.github.com/david415/cbd6342db0894ba98f94
+
+   _  _     _____ _____   _____   _                 
+ _| || |_  |_   _|  __ \ / ____| | |                
+|_  __  _|   | | | |__) | |      | |     ___   __ _ 
+ _| || |_    | | |  _  /| |      | |    / _ \ / _` |
+|_  __  _|  _| |_| | \ \| |____  | |___| (_) | (_| |
+  |_||_|   |_____|_|  \_\\_____| |______\___/ \__, |
+                                               __/ |
+                                              |___/ 
+
+<rfree> #mempo meeting is in 1 hour 
+
+<iRelay> <rfreeman@oftc> ok let's just push online the meeting plan
+
+<iRelay> <rfreeman@oftc> dawuud, has an idea to publish our repository deb.mempo.org also from a collective onion grid storage (but will be mostly AFK today)
+* SeekingFor is now known as SeekingFo
+<iRelay> <dawuud@freenode> in a few minutes i'll post some informative links about how i use tahoe-lafs with tor hidden services etc..
+<iRelay> <rfreeman@oftc> Ok guys, as you know on deb.mempo.org we have working repository that also works over Freenet cloud, and we have installer i.sh to set all up
+<iRelay> <rfreeman@oftc> avvs, how did i.sh installer performed?
+* dg (dg@irc.dg.i2p) has joined #mempo
+* Xtothec has quit (Connection reset by peer)
+* ChanServ removes channel operator status from dg
+<iRelay> <freeroute@freenode> hello everyone, I heard about mempo on reddit and decided to check it out.
+<iRelay> <rfreeman@oftc> hi freeroute :) Do you plan to use it as Desktop or Server? Any questions?
+<iRelay> <avvs@oftc> i.sh works with freenet options, without torify; installation is very simply - run script and follow instruction
+* Xtothec (Xtothec@kz3ej4mosdw74shm36wrwh7f2bn56m62b2uqlm5sg7wbzi7cugka.b32.i2p) has joined #mempo
+* dg has quit (irc.postman.i2p irc.dg.i2p)
+* dg (dg@irc.dg.i2p) has joined #mempo
+* prot0n (proton@j2i7nrxbt7ck5ljstnwstmdlhzaisa7wtbmlvvtd6fixcsofsn6a.b32.i2p) has joined #mempo
+* zerorax (zerorax@zidpmybkglps46mqynj4rrsuvbmdev44t7jealq4a53essjsvgmq.b32.i2p) has joined #mempo
 
 
+<psi> meeting?
+<iRelay> <freeroute@freenode> rfreeman_w: I hope to use it as desktop environment, but I'm not sure how hard this will be. I noted my used case here - https://ssl.reddit.com/r/linux/comments/2r3t8u/id_like_to_use_security_measuers_such_as/
+* cryptoferret (cryptof@xabi2tcjfitus34chow7ehsonctnhpggfwjo4sqcvtwvdeihw2uq.b32.i2p) has joined #mempo
+<cryptoferret> hello
 
 
+<iRelay> <rfreeman@oftc> hi psi, yes.
+<cryptoferret> is this system suitable for bitcoin wallet? In what is it secure
+<iRelay> <dawuud@freenode> once i've setup a "restrictive proxy gateway" on one of the Tahoe-LAFS storage servers then i create a mempo APT mirror like this: https://gist.github.com/david415/cbd6342db0894ba98f94
+<iRelay> <iRelay@freenode> Title: Tahoe-LAFS APT mirror (at gist.github.com)
+<iRelay> <rfreeman@oftc> hello cryptoferret
+
+<iRelay> <rfreeman@oftc> ===============================================================
+<iRelay> <rfreeman@oftc> Basic info and meeting points are on http://mempo.org/meeting/2015_01_05.txt = http://www.mempo.i2p/meeting/2015_01_05.txt
+<iRelay> <rfreeman@oftc> ===============================================================
+
+<iRelay> <dawuud@freenode> i'll be sure to set a blank ("") Tahoe-LAFS convergence secret this time before creating the new mempo mirror
+<iRelay> <rfreeman@oftc> avvs, good. Was install from Freenet used? How long did that took?
+<iRelay> <avvs@oftc> yes, ~15 minutes
+<iRelay> <rfreeman@oftc> freeroute: ok, desktops works very well, just make sure to apt-get install the -desk variant of server, it is most compatible.  Things that do NOT work yet are binary drivers (e.g. nvidia, radeon binary drivers) but I think we could support it in future if people need (though heaving a binary blob means giving up on some privacy. there was already a user to root exploit in nvidia driver)
+<iRelay> <rfreeman@oftc> cryptoferret: one moment
+
+<iRelay> <rfreeman@oftc> freeroute: for your use case:  using Mempo on a Debian:     KVM will work.   Chromum, Firefox works, just use the pax_flags.sh script from deb.mempo.org
+<iRelay> <rfreeman@oftc> avvs, you use chromium? it works ok after setting pax flags right?
+<iRelay> <freeroute@freenode> rfreeman_w: ah yes, I remember that exploit. One of my considerations when purchasing hardware was use with Linux, so hence I chose for a mobo with Intel HD4000. Although sadly that platform onto itself is prob;ematic in terms of privacy/security (Intel AMT, binary blobs in UEFI etc.)
+<iRelay> <avvs@oftc> yes, it works
+* lazygravy (lazygravy@c3ggstldtwkw7jsmcomejysglgmgxfs6bnc66i77i2tz3xa3ul7a.b32.i2p) has joined #mempo
+<iRelay> <rfreeman@oftc> freeroute: movie/video works (on -desk kernel variant, others might stop it mplayer, vlc works.   KVM works.  dosbox and wine should work - if they would not then tell me/us we will make less strict version of kernel
+<iRelay> <rfreeman@oftc> freeroute: as for the other applications: it could happen that some application is killed by system. Then go to root and see "dmesg" there will be message explaining while it was killed. Then edit that pax script and put there the name of application with "m" or "r" or "mr" flags and run the script again - it will allow that application to run then.
+<iRelay> <rfreeman@oftc> freeroute: USB (camera, keyb/mouse, g3 modem etc) work
+<iRelay> <rfreeman@oftc> freeroute: VGA passthrough with KVM <--- which one is that? I used just kvm, and then it runs in small X window, that works fine. also kvm quemu internal VNC server works (but that is slow)
+<iRelay> <rfreeman@oftc> freeroute: so to summarize I think all will work very well :)  If you have initial problems just ask us here everything can be worked out.  Repeat question each few hours, usually we reply in 24 hours.   You can also add me on jabber: rfree@mempo.org (and @mempo.org has open registration frrom clients like jabber, and allows tor connections) , but better also ask in IRC :)
 
 
+<iRelay> <rfreeman@oftc> cryptoferret: yes bitcoin wallet (the core wallet) works very well with grsecurity. I recommend to try also -deskmax or even -servmax kernel variant, after you get -desk working, that is more secure
+<iRelay> <rfreeman@oftc> cryptoferret: it is much more secure then regular debian, by applying cool grsecurity feautures as described on grsecurity.net page. They stopped 0day bugs in kernel in the past!
+<iRelay> <rfreeman@oftc> cryptoferret: it is best to use a separate computer for wallet storage, or even an offline (or usually offline) one. Also fell free to ask us any questions here - or contact me rfree@mempo.org if any questions.  With bitcoins, always be vigilant :) I recommend to first try around for a week how all works with Mempo
+<iRelay> <freeroute@freenode> yeah pax+grsec rock
+<iRelay> <rfreeman@oftc> cryptoferret , freeroute - install instructions on deb.mempo.org should be very carefully read, e.g. remember to check for updates manually with apt-get search mempo!
+<iRelay> <freeroute@freenode> cryptoferret: still best security with BTC wallets are IMHO multisig keys
+<iRelay> <rfreeman@oftc> freeroute yeap. Maybe one node should be online like a hotwallet and half of signature, and always-offline computer for signature and bigger storage
+<cryptoferret> thank you, I will check it out later it seems useful
 
 
+* cryptoferret has quit (Quit: leaving)
+<iRelay> <freeroute@freenode> rfreeman_w: this is what I meant with VGA passthrough - https://www.youtube.com/watch?v=37D2bRsthfI - basically Windows running inside KVM, but all the video stuff is passed to GPU directly.
+<iRelay> <iRelay@freenode> Title: Qemu/KVM + vfio = Virtual machine for gaming with 95% of native performance = no more dual booting, Views: 39331, Rating: 98.0%
+<iRelay> <LobsterMan@freenode> YouTube Title: Qemu/KVM + vfio = Virtual machine for gaming with 95% of native performance = no more dual booting Views: 39,331 Length: 2:08 Uploaded:   2014-02-02
+<iRelay> <rfreeman@oftc> hello prot0n. As for the kernel deb - we (me, kocka_ usually) are packaging and building the grsecurity patches so that you do not have to do it yourself each week, it gets really annoying.
+<prot0n> autobuild?
+<iRelay> <rfreeman@oftc> the kernels we build are built in such way that if in doubt you can always rebuild our kernel and get identical .deb that we publish in repository
 
+<prot0n> how is it better than, installing debian + grsecurity patches?
+<iRelay> <rfreeman@oftc> prot0n currently we build it ourselves, that will be more automatic in future so it does not take any of our time (looking for DEVELOPERS for that btw, it's easy bash scripting - contact me)
+<iRelay> <rfreeman@oftc> the build is on our server, everyone gets the same .deb with the same kernel with the same random seed.  Adventage:  + you can always know if given .deb and given /boot/vmlinuz.gz is correct very easily
+<iRelay> <rfreeman@oftc> Disadv: -  you have the same layout of kernel as rest of mempo users, which could make certain attacks less hard then if it would be randomized on your computer
+<iRelay> <rfreeman@oftc> maybe we will in future make a .deb package that runs the build on your computer when installed.  and emails you with seed (the prove needed to later confirm if build was == source) that would be then most secure.  kocka_ what do you think
+<iRelay> <rfreeman@oftc> That was about Kernel .deb.  We also auto install pax flags. That will be more automated soon.    Then we will release RBAC profiles for some apps maybe,  and fixes for other apps (e.g. gpg with paranoid long keys)
+<iRelay> <legit@oftc> you will ask users to give their email address ?
+<iRelay> <rfreeman@oftc> legit, hmm no? This is a repository of .deb , everyone can use them, also anonymously (over tor, i2p, freenet) or fork the project it's all fully free
+<prot0n> what are PAX flags?
+<rfree> prot0n, PAX flags can be set for given file, e.g. for /usr/bin/gedit for example. They tell the hardened kernel to not be too strict about given program because it does some things that are "strange" e.g. writes and runs code in own memory in runtime. firefox needs that
+
+* iRelay has quit (Killed (NickServ (GHOST command used by iRelay`)))
+<prot0n> what does it do when another program does that?
+<rfree> it seems the IRC relay connecting irc channels together died now; No problem we will later post logs of chat too
+* iRelay (i2prelay@killyourtv.i2p) has joined #mempo
+
+<iRelay> <freeroute@freenode> also, consider looking into Project Tox, it's a Skype replacement but actually it could even replace IRC as well
+<rfree> ok we are back.   When any program does strange operation then it is killed.  This will kill large part of typical exploits/troyans.   As root user, you see that in dmesg, and you can disable protection for given program
+<psi> tox i would recommend to avoid
+<rfree> psi, got any opinion about tox?  I read it has some cool ideas, but I also read someone (you?) that it has/had exploits
+<iRelay> <freeroute@freenode> oh, how so psi?
+<psi> i don't trust tox until it is audited
+<psi> i trust otr better
+<psi> er
+<psi> more
+<psi> also
+<iRelay> <freeroute@freenode> oh yeah definitely, it's still in beta. Caution is necessary.
+<rfree> irc + otr is also usable, and irc is too simple protocol to leak data.  XMPP for example is quite complex.   Dunno about tox.
+<prot0n> i think IRC should disable the "real name" field
+<prot0n> to leak less data
+<psi> https://img.bi/#/eUTB0Mg!s3SDD9auM7TLxOvmb2ohgpV0vocXVRIdw2GmM8Dv
+<psi> also that
+<rfree> prot0n, good idea. We could patch irssi/xchat to do this by default
+<prot0n> also the ident is redundant too, at least in context of i2p
+<iRelay> Title: {{config.name}} (at img.bi)
+<iRelay> <freeroute@freenode> but it needs pro auditors, so if you guys know the know-how and/or know any who is willing to check it out, then please contribute to that project because I'd really like Skype to be replaced someday.
+* Xtothec has quit (Connection reset by peer)
+<psi> that image is called everything_wrong_with_tox.png
+<psi> and it really does show everything wrong with it
+<rfree> For all this programs, our Mempo Kernel can surly protect  your kernel from program that has vulnerability.   And can make it harded to exploit random vulns in program.   
+<rfree> this is our role for now
+<rfree> I strongly recommend to run different things on different linux users. E.g. have user for normal stuff, other one for banking, other for say. work as a lawyer, other for admin, other for games/skype/video
+<rfree> user-user isolation is much improved with grsec.
+<rfree> oh and chmod 700 /home/* :)  
+
+* Xtothec (Xtothec@kz3ej4mosdw74shm36wrwh7f2bn56m62b2uqlm5sg7wbzi7cugka.b32.i2p) has joined #mempo
+<iRelay> <freeroute@freenode> psi: heh, yeah that doesn't look all too good. Hopefully it will get better with time and otherwise I hope that either someone forks it or makes something even better.
+<iRelay> <rfreeman@oftc> and if in doubt, run given thing in kvm.
+<psi> it hasn't gotten any better tbhj
+<psi> tbh*
+
+
+<iRelay> <rfreeman@oftc> OK
+<iRelay> <freeroute@freenode> rfreeman_w: yeah that's what I'm going to go for, kind of like QubesOS isolation but with a hardened hypervisor being something like mempo
+<iRelay> <rfreeman@oftc> do we have any more questions from users?
+<iRelay> <freeroute@freenode> yeah I was wondering, I have to use a special kernel with mempo?
+<iRelay> <legit@oftc> any 32bit kernel ?
+<iRelay> <freeroute@freenode> (like, the one made by the mempo team)?
+<iRelay> <legit@oftc> *bits
+<iRelay> <rfreeman@oftc> legit, no 32 bit kernel currently. It could be done if people want. Best would be if new, anon devel would come and make the 32 b version of the config and test it, then we could make repo for that
+<iRelay> <rfreeman@oftc> we should make a list of tasks, like that "32 bit kernel", with priorities, devels.  Maybe on mantis? Or something more pro (not in php, not requiring real email by default etc)?
+<iRelay> <rfreeman@oftc> freeroute: currently Mempo exists as .deb packages that you install on to existing Debian, especially the Kernel package.  So using Mempo's kernel is the main point currently. You can apt-get install our kernel, then you have grsecurity.  i.sh installer gives proper flags.  In future we will also work on RBAC profiles but that is not required now
+
+
+<iRelay> <freeroute@freenode> rfreeman_w: ah I see, seems reasonable. And what is the latest kernel that Mempo uses currently?
+
+<iRelay> <rfreeman@oftc> we follow grsecurity stable 3.2 line . kocka_ might work on 3.14 line
+<prot0n> so, how is apt-get <memo-kernel> currently different from apt-get linux-patch-grsecurity ?
+* Xtothec (Xtothec@kz3ej4mosdw74shm36wrwh7f2bn56m62b2uqlm5sg7wbzi7cugka.b32.i2p) has joined #mempo
+<rfree> prot0n, it works :)  the linux-patch downloads just the sources. and is very outdated
+<rfree> grsecurity 3.2 is updated around weekly
+<rfree> grsecurity for 3.2 line is updated around weekly
+<prot0n> and the mempo kernel patch?
+<rfree> debian's package with path delivers patch from like 2012.. wow. absolutely do NOT use that
+<rfree> *patch
+<prot0n> eh.
+* K1773R (K1773R@k1773r.i2p) has joined #mempo
+<rfree> prot0n, we today made 98th release (since started counting)
+<rfree> prot0n, when you try it out, if anything would not work then ask us here, we will fix it.  It's very stable: I'm using it at over 10 computers all together (plus VMs).
+<rfree> for a year, over almost 100 versions now
+<iRelay> <legit@oftc> totally unrelated: I discovered the hardening-wrapper package few days ago, it enables some security hardening flags to compilers
+<iRelay> <legit@oftc> it might interest you, because of you know... security.
+<iRelay> <rfreeman@oftc> legit, we will in time rebuild all packages  1) with hardening flags   2) with the reproducible dpkg
+<prot0n> rfree: thanks, I will.
+<iRelay> <rfreeman@oftc> starting with security important ones
+<rfree> ok :)
+<rfree> This covers all questions from users currently?
+<iRelay> <freeroute@freenode> One more please :p What about packages? I assume they can just be from Debian's repos?
+<iRelay> <legit@oftc> rfreeman: k
+<prot0n> what is currently the best way to download/get these patches? (sorry if I missed it already)
+<iRelay> <freeroute@freenode> I've heard Debian unstable didn't really prioritize security packages.
+<rfree> freeroute yes:  by using "Mempo linux" you are now simply using your Debian, plus few added packags from deb.mempo.org - for now the kernels, and soon paxflags, other such security tools, fms, freenet and i2p dumb installer, tbb, bitcoin etc
+<iRelay> <legit@oftc> freeroute: no assigned security team to this branch
+<prot0n> does freenet have a significant impact on cpu use? i found it to be a hog on an older computer
+<rfree> prot0n, just follow instructions on deb.mempo.org . It's just 2 pages of text, best read it all to have better idea.  but basically you run the i.sh there and done
+<rfree> prot0n, freenet the anonymous cloud network? It has almost zero CPU use nowdays.  HDD use can be some concern, but simply set the disk limit to say 500 MB when installing 
+<prot0n> yes. had some significant cpu use on a computer that runs i2p fine
+<rfree> pr0ton if installing freenet etc, you might want to wait randomly a day or few, because ISPs see who uses freenet and could guess that is is "prot0n" . if you care about this
+<prot0n> with freened
+* peno_ has quit (Client exited)
+<prot0n> sure.
+<prot0n> (oh, it's actually running. maybe. or not.)
+<rfree> if you would set apt-over-freenet option in i.sh then that is very cool, but be patient, it will then take around 5 minutes for update and downloads are slow.  and sometimes timeout
+<rfree> this can be improved in future (so stay on channel to get info about updates :)
+<prot0n> so far i saw no issue with that, local authorities don't really care what darknets you run (though that might change in the future)
+<rfree> I know, just saying that it opens a way to seach for "prot0n", if that nick would be very important to keep totally secret for you 
+
+<prot0n> nope. i just set this nick up randomly.
+<rfree> but anyway irc disconnects correlated with ISP disconnects are probably most problematic
+<rfree> OH BTW
+<rfree> CONTACT:
+<prot0n> using a bouncer for 1 of your connections, should fix that ideally?
+<prot0n> correlation attack between darknet/clearnet irc drops
+<rfree> best way to most securely and privately contact us, is on Freenet message board system FMS (that is linked on Freenet main page) and encrypt with PGP and post to board mempo there. This is very secure.  (just use random delays of few hours between startup, download, new ID, post etc)
+<rfree> ^---------- CONTACT
+
+
+<rfree> prot0n, I think it would help a lot. Ask also psi he seems to be the IRC-guy :)
+<prot0n> good idea.
+<prot0n> correlation attacks are concerning. it's easy to leak info via realtime systems like irc
+<rfree> Freenet FMS avoids time correlation (especially if you disable publishing your trust-list, and disable set active=FALSE your identity some hours after posting, when you do not use it)
+* Irc2PGuest48747 has quit (Ping timeout: 321 seconds)
+<rfree> Freenet FMS used in above secure way, should be most secure, especially if you find friends with Freenet to build trusted darknet (or over VPN - that is one idea we have)
+<prot0n> sounds secure.
+<prot0n> what cryptography does VPN use?
+* SpaceApe (SpaceApe@znc.str4d.i2p) has joined #mempo
+<rfree> provided FMS code is secure (grsec will help there).  and minus e.g. hardware backdoors but that is other story (and banana-psi could help). 
+<psi> huh?
+<iRelay> <rfreeman@oftc> avvs, what is like rpsi but better? how much ram is there?
+* Gnosis_ has quit (Client exited)
+<iRelay> <rfreeman@oftc> err like r.pi
+* SpaceApe is now known as Irc2PGuest8328
+* particle_zoo^ has quit (Client exited)
+<iRelay> <avvs@oftc> bannana pi, 1 GB
+<rfree> neat then freenet+fms should work on bannana-pi.  We should do a Mempo for r and bannaa pi
+* Gnosis (nunya@gmfakhkrpt754dh3udqk74zmxgzdys2fgc3dtkrdwwh7ncia3gia.b32.i2p) has joined #mempo
+<rfree> hi Gnosis are you here now?
+<iRelay> <freeroute@freenode> doesn't the RPi still have a huge binary blob in the PowerVR driver?
+<rfree> freeroute it was a bit improved I think.
+<rfree> freeroute would you like to research this (google, find articles and peer review, see which information seems FUD and which real, which is up to date etc)?
+<zerorax> is there no documentation for driver developers?
+<rfree> psi, maybe we should have a Wiki for mempo.   But also accessible from normal internet and tor. Any ideas?
+* particle_zoo^ (particle_z@i5ik6oiazhkmwojfmgohwhf7rwb3ltkn45htqk7fo4yiqano5nbq.b32.i2p) has joined #mempo
+<rfree> zerorax, I dunno
+* rfreeman has quit (Connection reset by peer)
+<rfree> not sure if Gnosis is online, but I wanted to also add that
+<psi> rfree: sounds like a good idea
+<rfree> in Mempo we will support Anoncoin,  Monero and Bitcoin, Namecoin and Dogecoin in next months.
+<prot0n> what do you mean by 'support' ?
+<rfree> so you will be able to apt-get install monero   or bitcoin (the current version, not the 2 year old from debian stable)
+<prot0n> = have client installed by default?
+<prot0n> or offer as a repo
+<rfree> prot0n, make it trivially easy to install
+<rfree> also make it good:   with hardened flags and reproducible build
+<rfree> also PAX flags (but I hope none will be needed here)
+<rfree> and in future RBAC profile
+<prot0n> how anonymous is Anoncoin?
+<rfree> RBAC is awesome, you can tell each app exactly which files it can/can't use and when
+<prot0n> sounds good. is there a practical feature to track what process uses which files? like, access log
+<rfree> prot0n, for now most anonymous coin there is, is Monero (monero.cc).  Anoncoin will be when they implement that zerocoin crypto.  Dark seems be be not at all afaik.
+<iRelay> <freeroute@freenode> rfree: Well my source is from the Reddit comments, as I've understood the PowerVR people are not giving anything up. So everyone recommended to use that new Odroid that came out recently. Also has a bunch more features than RPi - https://www.reddit.com/r/linux/comments/2ov5v1/the_odroidc1_a_35_quadcore_linux_computer/
+<rfree> prot0n, yes there is "auditing". I did not tested it. Maybe you can read about it and try. Probably it's a matter of adding program to the proper GID number that you will find in /proc/system///.grsecurity/....  and them read dmesg logs.
+<iRelay> <iRelay@freenode> Title: The Odroid-C1, a 35$ Quadcore Linux computer : linux (at www.reddit.com)
+<iRelay> <rfreeman@oftc> thanks freeroute. Maybe we should discuss this in detail on reddit and them write down conclusions?  Would you like to lead such a reseach?   (e.g. I do not have time to research deeply every interesting thing but I could look at final report to elp judge it :)
+<zerorax> it looks like broadcom released full documentation for the rpi graphics
+<zerorax> http://www.raspberrypi.org/a-birthday-present-from-broadcom/
+<rfree> ===========================================================================
+<rfree> ===========================================================================
+<rfree> This was the user questions part (for now :)
+<rfree> If any user has private question to ask best way is to find me on Freenet-FMS
+<rfree> and use GPG and use board #mempo (see above talk for how to do that in secure way).
+<rfree> Or rfree@mempo.org - connections from tor work, registration in protocol works.
+<rfree> ===========================================================================
+<iRelay> <freeroute@freenode> rfreeman_w: sure that would be cool but I'm not really an expert on hardware (and especially not on ARM)
+
+
+<rfree> OK now for development
+<rfree> What should we develop in next month?
+* awire has quit (Connection reset by peer)
+<rfree> karc, lazygravy particle_zoo^ SeekingFo Sledgehammer benbrown, bgupta dawuud DrWhax kocka_ sugarpuff xor-freenet   that is mostly for you (or anyone else who would like in any way to help)
+<iRelay> <rfreeman@oftc> also avvs
+<rfree> written some ideas in:
+<rfree> http://mempo.org/meeting/2015_01_05.txt   =  http://www.mempo.i2p/meeting/2015_01_05.txt
+<iRelay> <bgupta@oftc> I'm not really a dev.. but was kinda lurking to figure out if there is any overlap between mempo, and tails. (It seems there is possibly room for colaboration.)
+<iRelay> <bgupta@oftc> iRelay: ^^
+<iRelay> <DrWhax@oftc> Hello
+<iRelay> <sugarpuff@oftc> rfree: (1) thx, but sorry i have my hands full atm. (2) btw, you should really look into Maidsafe if you haven't already.
+<iRelay> <DrWhax@oftc> rfreeman: I dont think we've met at 31c3, or did we?
+<iRelay> <rfreeman@oftc> DrWhax, rather no. There is always next year ;)
+<iRelay> <iera@freenode> hi, http://mempo.org/ why has chrome os in the table a green check on "patching all privacy problems" (even with question mark)
+<iRelay> <DrWhax@oftc> rather not? :P
+<iRelay> <DrWhax@oftc> onoez!
+<iRelay> <iRelay@freenode> Title: Mempo Project: Security+Privacy (at mempo.org)
+<iRelay> <rfreeman@oftc> bgupta, it's me (nick <rfree>) the iRelay is just the relaying bot between irc networks.  About tails, I thought we could aslo do a dumb-tails-run  script that grabs the tails iso and runs it in kvm.
+<iRelay> <iera@freenode> i thought chrome os would be the exact opposite of privacy
+<iRelay> <bgupta@oftc> ahh. I understand now.
+<iRelay> <rfreeman@oftc> bgupta, other option is that of course tails is free to use our .deb with kernels
+<iRelay> <bgupta@oftc> (the irelay bit)
+<iRelay> <DrWhax@oftc> rfreeman: what do you achieve with that? Can't people already run tails in whatever virt environment they like?
+<iRelay> <rfreeman@oftc> bgupta, would anyone like to work on packaging tails.iso into tails-data-image.deb , and writting tiny script   tails-run.deb that depends on that + runs  kvm /usr/share/tails.iso etc?   or can you find someone who would like to?  if yes then they should contact us here and on FMS
+<iRelay> <rfreeman@oftc> DrWhax: comfort.  Now I have to download, wait, check gpg.   And if that is other user then copy files or as to root...      apt-get once, and then it always auto  updates... so I know always  alt+f2 run-tails works.. seems far better :)
+<iRelay> <DrWhax@oftc> I see
+<iRelay> <DrWhax@oftc> right
+<iRelay> <DrWhax@oftc> makes sense
+* rfreeman (rfreeman@fizkzbx54u5fhmvnl2mjykvlu2pglxikviovj3ke4vxhch5ewuoq.b32.i2p) has joined #mempo
+<iRelay> <DrWhax@oftc> it auto updates from the iso if you make a persistent volume :)
+<iRelay> <DrWhax@oftc> but yeah
+<iRelay> <DrWhax@oftc> I see your point
+<iRelay> <rfreeman@oftc> iera: Chrome OS is/was employing security researcher working with/on grsec, and therefore got good grsec support. The system seems secure.   The added on marketing spying cloud crap is other thing
+<iRelay> <iera@freenode> rfreeman: ok but thats another row, patching ALL privacy problems clearly isnt it, imho it should be changed to red completely
+<iRelay> <rfreeman@oftc> personally I think it tries to be secure, but just is more loyal to maker/corp then to given user.  Secure tool used for bad motives.   Kind of like a prison or police can be secure, but then you corrupt it's leadership (chiefs, gov) and use the secure tool to make end-users less secure :)
+<iRelay> <rfreeman@oftc> </deepthoughts>
+
+<iRelay> <bgupta@oftc> when the homepage says created within debian, does that mean It's basically a debian metapackage, using official repos?
+<iRelay> <bgupta@oftc> oh nvm
+<iRelay> <bgupta@oftc> has an extra repo
+<iRelay> <rfreeman@oftc> iear: maybe. that table is not very accurate. I would like to get opinion from someone who knows a lot about chromeos or link to good established research
+<iRelay> <iera@freenode> right, but as we all now privacy needs security, but does not imply the other way around
+<iRelay> <iera@freenode> ok, i just avoided it of obvious reasons
+<iRelay> <rfreeman@oftc> bgupta, you keep using debian and debian's repo, but add deb.mempo.org - this is what i.sh installer there does
+<iRelay> <rfreeman@oftc> iera: yes I agree, of course using chromeos, e.g. because of storing things "in cloud" means you are not secure (because you have to trust admins of the cloud, the owners, the gov, the police, anyone is malicious or makes mistake or is hacked and you lost privacy)
+<iRelay> <rfreeman@oftc> iera maybe you would like to make a git pullrequest with added row about privacy, and say that chrome os by default keeps most of your data in it's cloud. if that is the case? plus a link to reputable source confirming this is how that all works (I do not own chromeos/chromebook)
+<prot0n> "anything in cloud" != secure, usually
+
+<iRelay> <bgupta@oftc> I see but are the repos signed by debian signing keys? or other? (I'd think the goal would it to be something within d.o?
+<iRelay> <rfreeman@oftc> bgupta, as written there, there is mine key:  21A5 9D31 7421 F02E C3C3 81F3 4623 E8F7 4595 3F23  - see http://deb.mempo.org/#trust
+<iRelay> <freeroute@freenode> btw guys perhaps you should add a donation address
+<iRelay> <iRelay@oftc> Title: Debian Repository for: Mempo - Hardened Privacy (at deb.mempo.org)
+<iRelay> <iera@freenode> hm
+<iRelay> <legit@oftc> rfreeman: i'll keep you updated if i can provide you a 32b kernel - just to know: is it possible to make reproductible builds on airgapped machines ?
+<iRelay> <iera@freenode> rfreeman: no idea what focus this should have then, privacy is so general and if you eg install chrome on gentoo its bad as well
+<iRelay> <rfreeman@oftc> bgupta, Debian will not take at least some of our changes, and others it will take months/years later, because it does not put security above following certain established procedures. This is why we have Mempo instead of just developing things inside the official Debian :) We are other distro, now as addon. So other GPG key, because it is not "by The Debian Project".   We do not have own remastered .iso instealler because no need and lots of 
+<iRelay> <rfreeman@oftc> k proabably. one day.
+<iRelay> <rfreeman@oftc> legit, yes it is possible, and that is a very good idea.
+<iRelay> <legit@oftc> nice
+* Sledgehammer has quit (Quit: leaving)
+
+<iRelay> <rfreeman@oftc> legit, if you would like to verify our older builds that would be awesome too.  Though keep in mind for much older builds you need to find archived older version of libc that debian used  because it changed at some point and it affects the build
+<iRelay> <iera@freenode> rfreeman: also: "Paranoia-free lead developers" is a but funny without any sources and why is chrome os+mempo red, rest green?
+<iRelay> <rfreeman@oftc> iera: well it is supposed to say that we are "paranoid" developers :)  Most of developers should be anonymous (well, pseudonymous).  We will build on air-gapped machines. even ER shielding is something we consider "cool" instead of "crazy". Maybe you can reword that part to sound better
+<iRelay> <iera@freenode> rfreeman: no objection to mempo, but do you know the chrome os devs?
+<iRelay> <rfreeman@oftc> if other develes e.g. Tails, Whonix are also so paranoid that they are using (or considering to use) building on airgapped computer *in faraday cage* (at least for the most important parts),  then they also deserve a point there.
+<iRelay> <rfreeman@oftc> for example I would say Debian does not deserve to be considered "paranoid", it does many things good (one of first to do GPG signatures of packages etc?)  but unfortunately drops the ball a bit eg regarding grsec.
+<iRelay> <iera@freenode> of course, no objection there, just wondering about chrome os
+<iRelay> <rfreeman@oftc> iera: I do not know. if you find better information, fell free to correct that table :)  It might contain outdated or bad info, then please do fix
+<rfree> dg, any chance of getting at least a  basic  security review of i2pbote by you or str4d or anyone? 
+<iRelay> <rfreeman@oftc> if anyone fixes anything, please ping me in channel or on rfee@mempo.org - we will get it merged.   Also as I mentioned Freenet FMS is very secure.  oh and i2p bote, I should get address there. psi you use bote, it works good, stable and all?
+<iRelay> <iera@freenode> im fine to work with git
+<rfree> i2pbote is an email remailer, uses no servers, has high delay on each hop, works over i2p (like tor - no ip), extreamly secure too
+<iRelay> <iera@freenode> but if you also dont have better info on the chrome os devs, its probably better to assume non-paranoia
+<psi> bote is neat
+<iRelay> <legit@oftc> also: someone should fix the ssl cert on mempo.org, if possible :p
+<rfree> thanks for the idea with donation address, freeroute.  I think eventually the mempo.org page will be updated with that. Afair there was some old address. Might be outdated, better wait
+<rfree> legit: yes it's described in #trust . We will probably move the server too
+<iRelay> <iera@freenode> +ssl redirect for http
+* str4d (str4d@znc.str4d.i2p) has joined #mempo
+<rfree> did anyone noticed how pro is deb.mempo.org regarding security of the page?   entire index.html is GPG signed :>
+<rfree> MITM of deb.mempo.org is not possible for that reason :)   also the same for freenet USK@ version of page
+<iRelay> <iera@freenode> and hsts
+<rfree> hi str4d.  We would like to use i2pbote for developers in Mempo project;  and maybe even, if possible, implement  apt-get install i2p-i2pbote in Mempo
+<rfree> str4d, any thought?  In particular, you could help us (and everyone) a lot by doing at least basic i2pbote audit,  at least to confirm it has no obvious mistakes or backdoors
+
+<str4d> I'm the primary developer of the Bote Android app. I would think that implies I have confidence in I2P-Bote :P
+<rfree> str4d, oh? I thought H.Hobo developed i2p-bote?
+<str4d> HH is the main I2P-Bote developer
+<str4d> I develop the Android app
+<rfree> sorry what is Bote Android app, you mean it is i2pbote for Android right?
+<str4d> (and make various changes to I2P-Bote as necessary to get the Android app to work)
+<rfree> ok I see, so this is a fork of i2p-bote plugin, to work on Android?
+<str4d> Yes
+<str4d> Same backend, new UI
+<str4d> Not a fork, it uses the same I2P-Bote code
+<rfree> str4d, did you at least glanced over entire code of i2p-bote?
+<str4d> Only difference is it has an Android frontend, instead of a web frontend
+<str4d> I have looked at enough of the I2P-Bote code to be satisfied with it.
+* str4d actually redid the crypto code a few days ago
+<rfree> str4d, ok cool, could you make a short GPG statement that you reviewed the code with checksum ..... on day and it seems rather fine etc?
+<str4d> (to make it provider-agnostic so I could use more up-to-date crypto libs on Android)
+<str4d> heh, "rather fine"
+<rfree> str4d, we will be building it for Debian, we will recommend openjdk7.
+<rfree> str4d, is the build reproducible? I assume it is, as usually with java, at least the unpacked .jar will be identical if builded with same compiler/platform right? 
+<str4d> Sure. I will reference the Monotone commit ref, instead of a checksum.
+<str4d> Java builds are not completely reproducible
+<str4d> (At least, not without a strict build env)
+<str4d> Java compilers include timestamps in various parts of the bytecode IIRC
+* str4d has not tried to make it reproducible
+* Itsjustme1 (itsjustme@reljhm7dww7drcracxfhp5nkunvz3uer2uscttg3elqys2hegexa.b32.i2p) has joined #mempo
+<rfree> str4d, is it possible to also do a checksum, or a .zip and checksum that (zip > tar, tar leaks UID/UNAME etc),  so that anyone even not using monotone could later confirm it?
+<str4d> Maybe it is possible. I haven't had the need to find out
+* tsukamoto (turing@j24d7zyunodao3brpag6tn3ihj5cttykgtc6pjwkz6sotgoym3dq.b32.i2p) has joined #mempo
+<rfree> str4d, I was doing reproducible builds of Freenet, it worked. Maybe they used same build path.   Would you like to show me how to build i2p bote or even take over that task in mempo?
+<rfree> this is the part where I need to delagate a bit, to people far more knowlegable :)
+* legit has quit (Client exited)
+<str4d> rfree: checksum is linked to the exact way the source gets packaged, which is fragile. The Monotone commit ref implicitly hashes all source data, so acts as a checksum.
+<str4d> rfree: if they got it working then it's probably possible. I just haven't been interested enough in it to try/test.
+<str4d> re: apt-get install i2pbote - not possible (yet), desktop I2P-Bote is an I2P plugin.
+<rfree> str4d, so monotone can be always checked (even if servers would die etc) as long as someone has the copy of monotone clone, same like it works with git clone?
+<str4d> Yes
+<rfree> str4d, yes the idea was to install i2p and then install i2p-i2pbote plugin
+<rfree> str4d, when I have running i2p, and I have the .jar of i2pbote, can I from commandline install it? e.g. copy file somewhere?
+<rfree> so this could be scripted in postinstall script
+<str4d> rfree: you need to talk to kytv about that, he is Debian package builder, and is the most likely person to know how to handle a .deb for I2P plugins.
+<rfree> allright
+<str4d> rfree: not directly from commandline, but you can install from routerconsole /configclient using a file:// URI
+<str4d> (to the i2pbote.xpi2p or i2pbote.su3)
+<rfree> ok cool :)  <-- dg  
+<rfree> ok I'm putting i2p and i2p-i2pbote on agenda
+<iRelay> <iera@freenode> speaking of monotone ... is there a bugtracker for mempo?
+<rfree> OK what about task tracker, bug tracker.  Any idea?
+<rfree> iera: :)
+
+<iRelay> <iera@freenode> telepathy?
+* legit (legit@yl5mxz66dab2i2exqvhrzm33mafwtem7gmgitbeslywan4bxxgsq.b32.i2p) has joined #mempo
+<rfree> str4d, you use trac on i2p, I used trac and Mantis in the past. Any hints?   Trac is in python, not being in PHP is a plus
+<rfree> what do you guys think about using Mantis for our bugtracker?    str4d is it easy to make Mantis send emails to i2p like to @mail.i2p or in future to bote?
+<iRelay> <iera@freenode> list of decentralized bugtrackers http://dist-bugs.branchable.com/software/
+<iRelay> <iRelay@freenode> Title: software (at dist-bugs.branchable.com)
+<rfree> git-issues looks nice.  It needs only git protocol?  we know git can work over i2p and over freenet
+<iRelay> <iera@freenode> didnt look at these
+<iRelay> <iera@freenode> but trust-wise of course vcs bugtrackers are far better than database backend trackers
+<iRelay> <iera@freenode> because the admin just can make a bug disappear
+<iRelay> <iera@freenode> or a bugtracker on bitcoin architecture, where nothing can be erased
+<str4d> rfree: http://pastethis.i2p/show/qAigQweySBA4LdhNVuM5/
+<iRelay> Title: Paste #qAigQweySBA4LdhNVuM5 | LodgeIt! (at pastethis.i2p)
+<rfree> in such scenario like on git, can the bugs have still nice serial numbers 1,2,3...
+<iRelay> <iera@freenode> because git uses 1. sha1 which can be considered broken in the near future and 2. i dont know if you can sneak in/remove silently something from git (maybe git is ok)
+<rfree> in git you can not remove silently, but indeed sha1. They really should move to sha2 
+<iRelay> <iera@freenode> but then again this applies to all sources we have so we will be f*** anyway :p
+<rfree> iera: btw as for uncensorable bug reports, a bug report in FMS board "mempo" is a good way too
+<iRelay> <iera@freenode> ok
+<str4d> rfree: I know nothing about Mantis, but anything that can send to a SMTP server is fine - point it to a smpt.postman.i2p tunnel. Just make sure that the From: email address is the same as the user you log into postman's server with.
+<str4d> I2P-Bote has an SMTP interface, you can use that to send Bote emails.
+<rfree> str4d, nice. There is yet no outproxy to either mail.i2p nor to internet? Also no inproxy?
+<str4d> Not yet, no
+<iRelay> <iera@freenode> mail with git shouldnt be a problem, just write hooks on the server which send mails
+
+(reconnect)
+
+* elgoog has quit (Ping timeout: 325 seconds)
+* str4d (str4d@znc.str4d.i2p) has left #mempo (leaving)
+<rfree> ok we should pick up some tool for bugs
+<rfree> I guess for now github issues?
+* theotherside (theothersi@gateway01.anonet) has joined #mempo
+<rfree> https://github.com/mempo/deterministic-kernel/issues for bug reporting -or- post to uncensorable Freenet system using FMS program to board "mempo"
+<iRelay> Title: Issues · mempo/deterministic-kernel · GitHub (at github.com)
+<iRelay> <rfreeman@oftc> ===========================================================================
+<iRelay> <rfreeman@oftc> ===========================================================================
+<iRelay> <rfreeman@oftc> Planning development
+<iRelay> <rfreeman@oftc> ===========================================================================
+<iRelay> <rfreeman@oftc> kocka_, how is work on 3.14 branch? I wonder should we have 2 branches of the git repo, or should we in one put both patches (but then all scripts will be more complex)
